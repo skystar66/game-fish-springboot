@@ -21,10 +21,6 @@ public class GateApplication implements CommandLineRunner {
     @Autowired
     Server server;
 
-
-
-
-
     public static void main(String[] args) {
         SpringApplication.run(GateApplication.class, args);
     }
