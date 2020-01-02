@@ -1,0 +1,139 @@
+server:
+  port: 10002
+spring:
+  application:
+    name: game-cluster
+
+REDIS_IP: 127.0.0.1
+logging:
+ config: classpath:spring-logback.xml
+
+mail:
+  mailSmtpHost: smtp.qq.com
+  mailSmtpSslEnable: false
+  mailSmtpAuth: true
+  sendUser: 2755055412@qq.com
+  password: Jzy3591
+  reciveUser: 2432271225@qq.com
+
+threadpool-http:
+  name: 默认线程池执行器:0
+  corePoolSize: 100
+  maxPoolSize: 300
+  keepAliveTime: 30
+threadpool-tcp:
+  name: 默认线程池执行器:0
+  corePoolSize: 10
+  maxPoolSize: 50
+  keepAliveTime: 30
+  heart: 1000
+mina-client:
+  id: 3
+  orderedThreadPoolExecutorSize: 2
+  receiveBufferSize: 1048576
+  sendBufferSize: 1048576
+  reuseAddress: true
+  tcpNoDelay: true
+  readerIdleTime: 1200
+  writerIdleTime: 1200
+  soLinger: 0
+  type: GATE
+  name: 网关3服
+  maxConnectCount: 1
+  connTo:
+    receiveBufferSize: 1048576
+    sendBufferSize: 1048576
+    type: CLUSTER
+    host: 127.0.0.1
+    port: 8000
+mina-game-tcp:
+  id: 3
+  ip: 127.0.0.1
+  port: 8003
+  httpPort: 8003
+  type: GATE
+  name: 网关3服
+  orderedThreadPoolExecutorSize: 50
+  receiveBufferSize: 1048576
+  sendBufferSize: 1048576
+  reuseAddress: true
+  tcpNoDelay: true
+  readerIdleTime: 180
+  writerIdleTime: 0
+  soLinger: 0
+  channel: 37wan
+mina-http:
+  httpPort: 8006
+  orderedThreadPoolExecutorSize: 5
+  receiveBufferSize: 204800
+  sendBufferSize: 204800
+  reuseAddress: true
+  tcpNoDelay: true
+  readerIdleTime: 30
+  writerIdleTime: 30
+  soLinger: 5
+mina-user-udp:
+  id: 3
+  ip: 127.0.0.1
+  port: 8004
+  httpPort: 8003
+  type: GATE
+  name: 网关3服
+  orderedThreadPoolExecutorSize: 100
+  receiveBufferSize: 1048576
+  sendBufferSize: 1048576
+  reuseAddress: true
+  tcpNoDelay: true
+  readerIdleTime: 1800
+  writerIdleTime: 1800
+  soLinger: 0
+  channel: jzy
+mina-user-tcp:
+  id: 3
+  ip: 127.0.0.1
+  port: 8002
+  httpPort: 8006
+  type: GATE
+  name: 网关3服
+  orderedThreadPoolExecutorSize: 300
+  receiveBufferSize: 1048576
+  sendBufferSize: 1048576
+  reuseAddress: true
+  tcpNoDelay: true
+  readerIdleTime: 180
+  writerIdleTime: 0
+  soLinger: 0
+  channel: jzy
+mina-ws-tcp:
+  id: 3
+  ip: 127.0.0.1
+  port: 8007
+  httpPort: 8003
+  type: GATE
+  name: 网关3服
+  orderedThreadPoolExecutorSize: 50
+  receiveBufferSize: 1048576
+  sendBufferSize: 1048576
+  reuseAddress: true
+  tcpNoDelay: true
+  readerIdleTime: 600
+  writerIdleTime: 600
+  soLinger: 0
+  channel: jzy
+redis:
+  nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004,127.0.0.1:7005,127.0.0.1:7006
+  poolMaxTotal: 500
+  poolMaxIdle: 5
+  connectionTimeout: 2000
+  soTimeout: 2000
+  maxRedirections: 6
+  timeBetweenEvictionRunsMillis: 30000
+  minEvictableIdleTimeMillis: 1800000
+  softMinEvictableIdleTimeMillis: 1800000
+  maxWaitMillis: 60000
+  testOnBorrow: true
+  testWhileIdle: false
+  testOnReturn: false
+mongo:
+  dbName: bydr_gate
+  url: mongodb://127.0.0.1:27017

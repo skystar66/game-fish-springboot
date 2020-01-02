@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <substitutionProperty name="tbexNews.base" value="./logs"/>
+    <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符
+
+                              value="%d{MM-dd HH:mm:ss.SSS}-[%thread] %logger{0}.%method[%F.%L]: %msg%n"/>
+                              value="%date{yyyy-MM-dd HH:mm:ss} | %highlight(%-5level) | %boldYellow(%thread) | %boldGreen(%logger) | %msg%n"/>
+
+
+    -->
+    <substitutionProperty name="tbexNews.pattern"
+                          value="%d{MM-dd HH:mm:ss.SSS} %highlight(%-5level) --- [%boldGreen(%thread)] %cyan(%logger{0}.%method): %msg  %n"/>
+    <appender name="info" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${tbexNews.base}/info.log</File>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${tbexNews.pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${tbexNews.base}/info.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Error Level -->
+    <appender name="error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${tbexNews.base}/error.log</File>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${tbexNews.pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${tbexNews.base}/error.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${tbexNews.pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.apache.ibatis" level="INFO">
+        <appender-ref ref="console"/>
+    </logger>
+    <!--<logger name="com.tbex.oss.main.repo" level="debug" />-->
+
+    <logger name="java.sql" level="INFO">
+        <appender-ref ref="console"/>
+    </logger>
+    <root level="INFO">
+        <appender-ref ref="console"/>
+        <appender-ref ref="info"/>
+        <appender-ref ref="error"/>
+    </root>
+</configuration>

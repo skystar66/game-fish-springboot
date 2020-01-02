@@ -1,0 +1,5 @@
+
+isquid:CommentedOutCodeLineE"<This block of commented-out lines of code should be removed.(¯¤üÌ8›¬ôí-
+Xsquid:S1191"5Use classes from the Java API instead of Sun classes.(âÏ¡§ûÿÿÿÿ8ûÜôí-
+¤squid:S1186L"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¸âÓ¶ýÿÿÿÿ8“íõóí-
+bsquid:UselessImportCheck"2Remove this unused import 'sun.misc.MessageUtils'.(âÏ¡§ûÿÿÿÿ8ûÜôí-

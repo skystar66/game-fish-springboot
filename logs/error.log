@@ -1,0 +1,738 @@
+01-02 11:38:35.713 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 11:39:03.660 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 11:39:03.767 [1;31mERROR[0;39m --- [[1;32mmain[0;39m] [36mLoggingFailureAnalysisReporter.report[0;39m: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field gateServerScript in com.xl.game.gate.server.GateUdpUserServer required a single bean, but 2 were found:
+	- ipBlackListScript: defined in file [/Users/xuliang/Documents/game-server/game-fish/game-gate/target/classes/com/xl/game/gate/script/impl/IpBlackListScript.class]
+	- udpMsgRegisterScript: defined in file [/Users/xuliang/Documents/game-server/game-fish/game-gate/target/classes/com/xl/game/gate/script/impl/UdpMsgRegisterScript.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+  
+01-02 11:42:35.452 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 11:42:35.572 [1;31mERROR[0;39m --- [[1;32mmain[0;39m] [36mSpringApplication.reportFailure[0;39m: Application run failed  
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gateApplication': Unsatisfied dependency expressed through field 'gateUdpUserServer'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gateUdpUserServer': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: addresses
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:586)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.xl.game.gate.GateApplication.main(GateApplication.java:35)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gateUdpUserServer': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: addresses
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:139)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1691)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: addresses
+	at org.apache.mina.filter.firewall.BlacklistFilter.setBlacklist(BlacklistFilter.java:100)
+	at com.xl.game.gate.script.impl.IpBlackListScript.setIpBlackList(IpBlackListScript.java:48)
+	at com.xl.game.gate.server.GateUdpUserServer.init(GateUdpUserServer.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:309)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:136)
+	... 31 common frames omitted
+01-02 11:48:46.715 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 11:48:49.000 [1;31mERROR[0;39m --- [[1;32mThread-33[0;39m] [36mTcpServer.run[0;39m: TCP 服务异常  
+java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8500
+original message : Address already in use
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:238)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:586)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:71)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:454)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 11:48:49.000 [1;31mERROR[0;39m --- [[1;32mThread-26[0;39m] [36mTcpServer.run[0;39m: TCP 服务异常  
+java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8500
+original message : Address already in use
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:238)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:586)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:71)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:454)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 11:48:49.045 [1;31mERROR[0;39m --- [[1;32mmain[0;39m] [36mSpringApplication.reportFailure[0;39m: Application run failed  
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:821)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:802)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.xl.game.gate.GateApplication.main(GateApplication.java:35)
+Caused by: java.lang.NullPointerException: null
+	at com.xl.game.util.SpringUtil.getBean(SpringUtil.java:40)
+	at com.xl.game.mongo.manager.AbsMongoManager.createConnect(AbsMongoManager.java:32)
+	at com.xl.game.gate.GateApplication.run(GateApplication.java:44)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:818)
+	... 5 common frames omitted
+01-02 11:49:03.509 [1;31mERROR[0;39m --- [[1;32mThread-28[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 11:49:03.713 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-1[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 11:49:03.717 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-1[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 11:49:14.026 [1;31mERROR[0;39m --- [[1;32mThread-33[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 11:49:25.648 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 11:51:39.057 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 11:55:39.933 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 11:59:16.815 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 12:00:06.554 [1;31mERROR[0;39m --- [[1;32mThread-30[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 12:31:25.929 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 12:31:28.776 [1;31mERROR[0;39m --- [[1;32mmain[0;39m] [36mSpringApplication.reportFailure[0;39m: Application run failed  
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:821)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:802)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.xl.game.gate.GateApplication.main(GateApplication.java:35)
+Caused by: java.lang.NullPointerException: null
+	at com.xl.game.util.SpringUtil.getBean(SpringUtil.java:40)
+	at com.xl.game.mongo.manager.AbsMongoManager.createConnect(AbsMongoManager.java:32)
+	at com.xl.game.gate.GateApplication.run(GateApplication.java:44)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:818)
+	... 5 common frames omitted
+01-02 12:31:42.564 [1;31mERROR[0;39m --- [[1;32mThread-39[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 12:31:54.390 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 12:33:34.723 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 12:33:36.913 [1;31mERROR[0;39m --- [[1;32mmain[0;39m] [36mSpringApplication.reportFailure[0;39m: Application run failed  
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:821)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:802)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.xl.game.gate.GateApplication.main(GateApplication.java:35)
+Caused by: java.lang.NullPointerException: null
+	at com.xl.game.util.SpringUtil.getBean(SpringUtil.java:40)
+	at com.xl.game.mongo.manager.AbsMongoManager.createConnect(AbsMongoManager.java:32)
+	at com.xl.game.gate.GateApplication.run(GateApplication.java:44)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:818)
+	... 5 common frames omitted
+01-02 12:34:01.357 [1;31mERROR[0;39m --- [[1;32mThread-29[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 12:34:01.552 [1;31mERROR[0;39m --- [[1;32mpool-6-thread-1[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000002: nio socket, server, /127.0.0.1:61597 => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 12:34:01.554 [1;31mERROR[0;39m --- [[1;32mpool-6-thread-1[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 12:37:57.299 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 12:37:59.642 [1;31mERROR[0;39m --- [[1;32mmain[0;39m] [36mSpringApplication.reportFailure[0;39m: Application run failed  
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:821)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:802)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.xl.game.gate.GateApplication.main(GateApplication.java:35)
+Caused by: java.lang.NullPointerException: null
+	at com.xl.game.util.SpringUtil.getBean(SpringUtil.java:40)
+	at com.xl.game.mongo.manager.AbsMongoManager.createConnect(AbsMongoManager.java:32)
+	at com.xl.game.gate.GateApplication.run(GateApplication.java:44)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:818)
+	... 5 common frames omitted
+01-02 12:38:38.275 [1;31mERROR[0;39m --- [[1;32mThread-24[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 12:38:38.474 [1;31mERROR[0;39m --- [[1;32mNioProcessor-23[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000002: nio socket, client, /127.0.0.1:50104 => /127.0.0.1:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 12:38:40.814 [1;31mERROR[0;39m --- [[1;32mThread-30[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 12:41:53.730 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 12:42:13.642 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 12:42:16.240 [1;31mERROR[0;39m --- [[1;32mmain[0;39m] [36mSpringApplication.reportFailure[0;39m: Application run failed  
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:821)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:802)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.xl.game.gate.GateApplication.main(GateApplication.java:39)
+Caused by: java.lang.NullPointerException: null
+	at com.xl.game.model.mongo.dao.HallInfoDao.<init>(HallInfoDao.java:26)
+	at com.xl.game.model.mongo.dao.HallInfoDao.getDB(HallInfoDao.java:33)
+	at com.xl.game.gate.manager.MongoManager.initDao(MongoManager.java:25)
+	at com.xl.game.mongo.manager.AbsMongoManager.createConnect(AbsMongoManager.java:37)
+	at com.xl.game.gate.GateApplication.run(GateApplication.java:48)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:818)
+	... 5 common frames omitted
+01-02 12:42:47.596 [1;31mERROR[0;39m --- [[1;32mThread-38[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 12:42:47.790 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-2[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 12:42:47.794 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-2[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:00:25.071 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:01:02.464 [1;31mERROR[0;39m --- [[1;32mThread-29[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:01:02.645 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-5[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000003: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:01:02.655 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-5[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:02:25.957 [1;31mERROR[0;39m --- [[1;32mThread-33[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 13:04:39.054 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 13:04:56.725 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:06:42.851 [1;31mERROR[0;39m --- [[1;32mThread-36[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:06:45.504 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-2[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000002: nio socket, server, /127.0.0.1:56268 => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:06:45.506 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-2[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:07:37.852 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:07:59.119 [1;31mERROR[0;39m --- [[1;32mThread-28[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:08:01.789 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-3[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000003: nio socket, server, /127.0.0.1:52969 => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:08:01.791 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-3[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:14:08.481 [1;31mERROR[0;39m --- [[1;32mThread-28[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 13:17:55.705 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 13:18:26.078 [1;31mERROR[0;39m --- [[1;32mThread-33[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 13:18:37.855 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 13:18:58.591 [1;31mERROR[0;39m --- [[1;32mThread-28[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 13:19:24.462 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 13:19:43.464 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:21:26.911 [1;31mERROR[0;39m --- [[1;32mThread-30[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:21:29.648 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-2[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000002: nio socket, server, /127.0.0.1:62508 => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:21:29.650 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-2[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:25:05.093 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:26:58.932 [1;31mERROR[0;39m --- [[1;32mThread-30[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:27:01.577 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-5[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000003: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:27:01.579 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-5[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:27:11.367 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:29:34.775 [1;31mERROR[0;39m --- [[1;32mThread-31[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:29:37.441 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-6[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000004: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:29:37.443 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-6[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:32:02.137 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:33:20.546 [1;31mERROR[0;39m --- [[1;32mThread-36[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:33:23.213 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-8[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000005: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:33:23.215 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-8[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:33:35.240 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:35:22.921 [1;31mERROR[0;39m --- [[1;32mThread-29[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:35:25.586 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-9[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000006: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:35:25.590 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-9[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:36:35.214 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:36:49.989 [1;31mERROR[0;39m --- [[1;32mThread-28[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:36:52.661 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-10[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000007: nio socket, server, /127.0.0.1:62441 => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:36:52.665 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-10[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:37:17.173 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:37:35.977 [1;31mERROR[0;39m --- [[1;32mThread-27[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:37:38.647 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-11[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000008: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:37:38.649 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-11[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:37:48.404 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:38:18.395 [1;31mERROR[0;39m --- [[1;32mThread-27[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:38:21.057 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-13[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000009: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:38:21.058 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-13[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:39:13.321 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:40:03.774 [1;31mERROR[0;39m --- [[1;32mThread-39[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:40:06.430 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-15[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x0000000A: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:40:06.431 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-15[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:46:45.451 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:47:12.686 [1;31mERROR[0;39m --- [[1;32mThread-22[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:47:15.357 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-17[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x0000000B: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:47:15.358 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-17[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:47:57.700 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:48:26.603 [1;31mERROR[0;39m --- [[1;32mThread-20[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:48:29.332 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-19[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x0000000C: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:48:29.334 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-19[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:49:15.158 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:50:38.943 [1;31mERROR[0;39m --- [[1;32mThread-30[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:50:42.912 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-20[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x0000000D: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:50:42.913 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-20[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:53:19.909 [1;31mERROR[0;39m --- [[1;32mThread-27[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 13:53:37.983 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 13:55:09.178 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:55:27.374 [1;31mERROR[0;39m --- [[1;32mThread-30[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:55:30.034 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-1[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 13:55:30.036 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-1[0;39m] [36mDefaultProtocolHandler.sessionClosed[0;39m: 未知游戏服务器断开链接  
+01-02 13:57:19.701 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 13:58:00.577 [1;31mERROR[0;39m --- [[1;32mThread-34[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 13:58:03.250 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-4[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000003: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 14:00:57.660 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 14:01:39.278 [1;31mERROR[0;39m --- [[1;32mThread-37[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 14:01:40.788 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-6[0;39m] [36mDefaultProtocolHandler.messageReceived[0;39m: messageReceived  
+java.util.concurrent.RejectedExecutionException: Task com.xl.game.cluster.handler.tcp.ServerRegisterHandler@46fbd719 rejected from java.util.concurrent.ThreadPoolExecutor@588f3165[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 33]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at com.xl.game.mina.handler.DefaultProtocolHandler.messageHandler(DefaultProtocolHandler.java:133)
+	at com.xl.game.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:94)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 14:01:40.790 [1;31mERROR[0;39m --- [[1;32mpool-5-thread-6[0;39m] [36mDefaultProtocolHandler.messageReceived[0;39m: messageReceived  
+java.util.concurrent.RejectedExecutionException: Task com.xl.game.cluster.handler.tcp.ServerListHandler@2c154a4b rejected from java.util.concurrent.ThreadPoolExecutor@588f3165[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 33]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at com.xl.game.mina.handler.DefaultProtocolHandler.messageHandler(DefaultProtocolHandler.java:133)
+	at com.xl.game.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:94)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 14:01:42.004 [1;31mERROR[0;39m --- [[1;32mNioProcessor-23[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000002: nio socket, client, /127.0.0.1:49852 => /127.0.0.1:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 14:01:45.004 [1;31mERROR[0;39m --- [[1;32mThread-36[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 14:04:24.145 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 14:05:06.225 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 14:07:44.447 [1;31mERROR[0;39m --- [[1;32mThread-29[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 14:07:44.524 [1;31mERROR[0;39m --- [[1;32mThread-29[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 14:11:42.355 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 14:12:03.865 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 14:14:08.667 [1;31mERROR[0;39m --- [[1;32mThread-33[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 14:14:10.346 [1;31mERROR[0;39m --- [[1;32mThread-35[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 14:14:11.349 [1;31mERROR[0;39m --- [[1;32mNioProcessor-23[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000002: nio socket, client, /127.0.0.1:54723 => /127.0.0.1:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 14:14:41.281 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 14:15:18.969 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 14:15:42.638 [1;31mERROR[0;39m --- [[1;32mThread-27[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 14:15:42.706 [1;31mERROR[0;39m --- [[1;32mThread-37[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 14:16:36.433 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 14:16:50.732 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 14:20:09.195 [1;31mERROR[0;39m --- [[1;32mThread-26[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 14:20:09.271 [1;31mERROR[0;39m --- [[1;32mThread-31[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 14:21:50.599 [1;31mERROR[0;39m --- [[1;32m全局同步线程:ClusterTcpServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:ClusterTcpServer=heart=1000  
+01-02 14:22:14.399 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 14:22:29.034 [1;31mERROR[0;39m --- [[1;32mThread-28[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  
+01-02 14:22:31.700 [1;31mERROR[0;39m --- [[1;32mpool-6-thread-2[0;39m] [36mDefaultProtocolHandler.exceptionCaught[0;39m: 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常：{}  
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+01-02 14:23:02.292 [1;31mERROR[0;39m --- [[1;32m全局同步线程:GateTcpUserServer[0;39m] [36mTimerThread.start[0;39m: TimerThread:end=全局同步线程:GateTcpUserServer=heart=1000  
+01-02 14:23:35.108 [1;31mERROR[0;39m --- [[1;32mThread-24[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:ClusterTcpServer=flag=1  
+01-02 14:23:35.186 [1;31mERROR[0;39m --- [[1;32mThread-34[0;39m] [36mTimerThread.stop[0;39m: TimerThread:stop=全局同步线程:GateTcpUserServer=flag=1  

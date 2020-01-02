@@ -1,0 +1,8 @@
+
+\squid:S2259"BA "NullPointerException" could be thrown; "addr" is nullable here.(È˜ÖÅüÿÿÿÿ
+7squid:S1118"Hide this public constructor.(–—ÿÍþÿÿÿÿ
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(–—ÿÍþÿÿÿÿ
+?squid:S2116"%Use "Arrays.toString(array)" instead.(ÒÌü²ûÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¿ý—‘ùÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ú¥¤žùÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¶ä¨šüÿÿÿÿ

@@ -1,0 +1,12 @@
+
+Ssquid:S1068!"0Remove this unused "redisManager" private field.(¹¢”øÿÿÿÿ8˜„Â±ô-
+nsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(¨³îûÿÿÿÿ8˜„Â±ô-
+jsquid:S00112x"FDefine and throw a dedicated exception instead of using a generic one.(¡ğ¬õøÿÿÿÿ8˜„Â±ô-
+Ssquid:S2696D"6Make the enclosing method "static" or remove this set.(î‰ù38˜„Â±ô-
+Usquid:S1135C"2Complete the task associated to this TODO comment.(Ùæ×÷øÿÿÿÿ8˜„Â±ô-
+jsquid:S00112{"FDefine and throw a dedicated exception instead of using a generic one.(ù¡—¡şÿÿÿÿ8˜„Â±ô-
+[squid:S1155O">Use isEmpty() to check whether the collection is empty or not.(òªÁ/8˜„Â±ô-
+isquid:S3027T"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(‘²¡ıÿÿÿÿ8˜„Â±ô-
+esquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ã‡Ë8˜„Â±ô-
+~squid:S1450!"[Remove the "redisManager" field and declare it as a local variable in the relevant methods.(¹¢”øÿÿÿÿ8˜„Â±ô-
+Ksquid:S1602Ä",Remove useless curly braces around statement(Úèê­8˜„Â±ô-

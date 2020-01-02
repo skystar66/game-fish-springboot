@@ -1,0 +1,458 @@
+
+Osquid:S1161":Add the "@Override" annotation above this method signature(§ß—¡
+Tsquid:S1161":Add the "@Override" annotation above this method signature(ÑÍ“Ëûÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(§ß—¡
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(Æ÷¾¢ûÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ƒ¦†
+Osquid:S1161":Add the "@Override" annotation above this method signature(œè“
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ê„£
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÊÄÑ
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¤¢öøÿÿÿÿ
+Gsquid:S1199"-Extract this nested code block into a method.(í¡æ—ÿÿÿÿÿ
+ssquid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+Osquid:S1161":Add the "@Override" annotation above this method signature(§ß—¡
+Hsquid:S3077".Remove the "volatile" keyword from this field.(„­ßİøÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(˜œö¾ûÿÿÿÿ
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(Æ÷¾¢ûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(»¤Å“ûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(¹õˆÏùÿÿÿÿ
+?squid:S00108")Either remove or fill this block of code.(º„ç½
+lsquid:S00116"VRename this field "serverType_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º€Åˆ
+Vsquid:S1126"AReplace this if-then-else statement by a single return statement.(ŒÁ«ƒ
+>squid:S1905"*Remove this unnecessary cast to "Builder".(İ¤Â\
+=squid:S1604"(Make this anonymous inner class a lambda(ş¦•Ã
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Ã•Œƒüÿÿÿÿ
+osquid:S00116"TRename this field "serverId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı¾—›üÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(´çÍê
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(Æ÷¾¢ûÿÿÿÿ
+,squid:S2176"Rename this class.(ºœÓ­úÿÿÿÿ
+gsquid:S00116"QRename this field "wwwip_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜º™Ë
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+ksquid:S00116"VRename this field "serverInfo_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹Î®E
+Osquid:S1161":Add the "@Override" annotation above this method signature(¿¸Ú©
+Esquid:S4524"+Move this default to the end of the switch.(Î—­Šşÿÿÿÿ
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¤¢öøÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(´çÍê
+Tsquid:S1161":Add the "@Override" annotation above this method signature(˜œö¾ûÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(¥ùšÏ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Îõ¾Òûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Ã•Œƒüÿÿÿÿ
+fsquid:S00116"PRename this field "type_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ÿ³é
+jsquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ¬›Ôşÿÿÿÿ
+qsquid:S00116"VRename this field "serverInfo_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¥µÌùÿÿÿÿ
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 42 to the 15 allowed.(ÃõÛÊ
+Asquid:S1199"-Extract this nested code block into a method.(š„¶
+Tsquid:S1161":Add the "@Override" annotation above this method signature(˜œö¾ûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Îõ¾Òûÿÿÿÿ
+,squid:S2176"Rename this class.(ºœÓ­úÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(¥ùšÏ
+Osquid:S1161":Add the "@Override" annotation above this method signature(öË·š
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ê„£
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(Æ÷¾¢ûÿÿÿÿ
+esquid:S00116"PRename this field "name_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñœã/
+Gsquid:S1199"-Extract this nested code block into a method.(”¤óˆüÿÿÿÿ
+xsquid:S00116"]Rename this field "serverInfoBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÔŒ®üÿÿÿÿ
+{squid:S1845"fRename method "parser" to prevent any misunderstanding/clash with field "PARSER" defined on line 5920.(§ØüĞ
+Osquid:S1161":Add the "@Override" annotation above this method signature(¥ªóÃ
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(ˆÎ…•şÿÿÿÿ
+lsquid:S00116"VRename this field "serverInfo_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğú©±
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ê„£
+Osquid:S1161":Add the "@Override" annotation above this method signature(¿¸Ú©
+Gsquid:S1199"-Extract this nested code block into a method.(ÙšÖ­ùÿÿÿÿ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+Osquid:S1161":Add the "@Override" annotation above this method signature(œè“
+fsquid:S00116"PRename this field "name_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áè±Í
+Bsquid:S1199"-Extract this nested code block into a method.(†èÚö
+Bsquid:S1199"-Extract this nested code block into a method.(êØ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+>squid:S1905"*Remove this unnecessary cast to "Builder".(İ¤Â\
+Gsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+msquid:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+hsquid:S00116"RRename this field "result_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€şìª
+osquid:S00116"TRename this field "serverId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı¾—›üÿÿÿÿ
+osquid:S00116"TRename this field "httpport_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Ãêµùÿÿÿÿ
+Gsquid:S1199"-Extract this nested code block into a method.(”¤óˆüÿÿÿÿ
+xsquid:S4144"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 759.(®«îË
+Gsquid:S1199"-Extract this nested code block into a method.(ØİÄøÿÿÿÿ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+~squid:S4144"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 4626.(ÅØ‡ôşÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(¹õˆÏùÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Ã•Œƒüÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(ÑÍ“Ëûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(˜œö¾ûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(¹õˆÏùÿÿÿÿ
+hsquid:S00116"RRename this field "online_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àúãÔ
+jsquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ¬›Ôşÿÿÿÿ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ÃõÛÊ
+Lsquid:S1481"7Remove this unused "mutable_bitField0_" local variable.(ß”â¢
+Csquid:S3077".Remove the "volatile" keyword from this field.(§ØÅ 
+Osquid:S1161":Add the "@Override" annotation above this method signature(´çÍê
+ssquid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+Tsquid:S1161":Add the "@Override" annotation above this method signature(¹õˆÏùÿÿÿÿ
+{squid:S1845"fRename method "parser" to prevent any misunderstanding/clash with field "PARSER" defined on line 4014.(¹ÿÂ„
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+?squid:S1905"*Remove this unnecessary cast to "Builder".(¥ùšÏ
+{squid:S1845"fRename method "parser" to prevent any misunderstanding/clash with field "PARSER" defined on line 8994.(¢ïƒÁ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+jsquid:S00116"ORename this field "ids_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ÈÖ«ÿÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(§ß—¡
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(«Ñ¶—
+{squid:S1845"fRename method "parser" to prevent any misunderstanding/clash with field "PARSER" defined on line 3144.(şÉºó
+dsquid:S00116"NRename this field "ip_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÁ±Õ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+Bsquid:S1199"-Extract this nested code block into a method.(­Ó–Ô
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+Tsquid:S1161":Add the "@Override" annotation above this method signature(˜œö¾ûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Îõ¾Òûÿÿÿÿ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÊÄÑ
+:squid:S1948"%Make "ip_" transient or serializable.(ªÁ±Õ
+Osquid:S1161":Add the "@Override" annotation above this method signature(´çÍê
+Tsquid:S1161":Add the "@Override" annotation above this method signature(¹õˆÏùÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(¥ªóÃ
+Bsquid:S1199"-Extract this nested code block into a method.(­Ó–Ô
+Gsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+jsquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ¬›Ôşÿÿÿÿ
+lsquid:S00116"VRename this field "serverInfo_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğú©±
+Asquid:S1948"'Make "info_" transient or serializable.(öÚÎÑıÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(¹õˆÏùÿÿÿÿ
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ªšë‰
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Îõ¾Òûÿÿÿÿ
+hsquid:S00116"RRename this field "result_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€şìª
+Osquid:S1161":Add the "@Override" annotation above this method signature(§ß—¡
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(Š·ı
+Osquid:S1161":Add the "@Override" annotation above this method signature(¥ªóÃ
+rsquid:S00116"WRename this field "totalMemory_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªôÉ©şÿÿÿÿ
+~squid:S4144"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 5915.(üãı³øÿÿÿÿ
+Qsquid:S2589"7Remove this expression which always evaluates to "true"(Œö£‘øÿÿÿÿ
+dsquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îÆ­t
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(ˆÎ…•şÿÿÿÿ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Ã•Œƒüÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(”×Ñ¾
+Osquid:S1161":Add the "@Override" annotation above this method signature(öË·š
+dsquid:S00116"NRename this field "ip_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÃ¤Ö
+ysquid:S1845"eRename method "parser" to prevent any misunderstanding/clash with field "PARSER" defined on line 764.(İÂ²s
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(Æ÷¾¢ûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(»¤Å“ûÿÿÿÿ
+€squid:S1845"fRename method "parser" to prevent any misunderstanding/clash with field "PARSER" defined on line 2156.(²…ı¬ûÿÿÿÿ
+Gsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+=squid:S1948"(Make "wwwip_" transient or serializable.(§ØÅ 
+fsquid:S00116"PRename this field "type_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ÿ³é
+lsquid:S00116"QRename this field "state_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ¿•Úüÿÿÿÿ
+jsquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ¬›Ôşÿÿÿÿ
+Qsquid:S2589"7Remove this expression which always evaluates to "true"(Œö£‘øÿÿÿÿ
+~squid:S4144"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 1527.(÷±£€şÿÿÿÿ
+Bsquid:S1199"-Extract this nested code block into a method.(ò‘
+?squid:S1905"*Remove this unnecessary cast to "Builder".(¥ùšÏ
+~squid:S4144"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 3139.(Šƒ†÷úÿÿÿÿ
+Bsquid:S1199"-Extract this nested code block into a method.(İ…î½
+ssquid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+,squid:S2176"Rename this class.(ºœÓ­úÿÿÿÿ
+;squid:S1452"&Remove usage of generic wildcard type.(Ççªû
+Osquid:S1161":Add the "@Override" annotation above this method signature(´çÍê
+rsquid:S00116"WRename this field "totalMemory_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªôÉ©şÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(”×Ñ¾
+Tsquid:S1161":Add the "@Override" annotation above this method signature(»¤Å“ûÿÿÿÿ
+jsquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÏõÇùÿÿÿÿ
+Hsquid:S3077".Remove the "volatile" keyword from this field.(öÚÎÑıÿÿÿÿ
+esquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı®Í³
+Osquid:S1161":Add the "@Override" annotation above this method signature(§ß—¡
+Lsquid:S1481"7Remove this unused "mutable_bitField0_" local variable.(ß”â¢
+lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Š°ƒÁøÿÿÿÿ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+[squid:S1126"AReplace this if-then-else statement by a single return statement.(ş ÇÑøÿÿÿÿ
+Csquid:S3077".Remove the "volatile" keyword from this field.(ªÁ±Õ
+Gsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+ssquid:S00116"XRename this field "maxUserCount_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù´¯‘ûÿÿÿÿ
+Gsquid:S1199"-Extract this nested code block into a method.(üÅåÂøÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Ã•Œƒüÿÿÿÿ
+msquid:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ê„£
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+Osquid:S1161":Add the "@Override" annotation above this method signature(¥ªóÃ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(»¤Å“ûÿÿÿÿ
+esquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½›­†
+Osquid:S1161":Add the "@Override" annotation above this method signature(¥ªóÃ
+Gsquid:S1199"-Extract this nested code block into a method.(À«¨ şÿÿÿÿ
+Gsquid:S1199"-Extract this nested code block into a method.(”¤óˆüÿÿÿÿ
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(ˆÎ…•şÿÿÿÿ
+hsquid:S00116"RRename this field "roleId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğÊ¹­
+[squid:S1126"AReplace this if-then-else statement by a single return statement.(Œ°ë„şÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(¥ùšÏ
+lsquid:S00116"VRename this field "serverInfo_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¡ü
+Osquid:S1161":Add the "@Override" annotation above this method signature(öË·š
+Tsquid:S1161":Add the "@Override" annotation above this method signature(˜œö¾ûÿÿÿÿ
+ssquid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Ã•Œƒüÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(öË·š
+dsquid:S00116"NRename this field "id_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—‡Ñ÷
+~squid:S4144"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 6658.(º¨Ä‡ÿÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(ÑÍ“Ëûÿÿÿÿ
+osquid:S00116"TRename this field "serverId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı¾—›üÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(œè“
+fsquid:S00116"PRename this field "type_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ÿ³é
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(äÀšô
+Esquid:S4524"+Move this default to the end of the switch.(Î—­Šşÿÿÿÿ
+Bsquid:S1199"-Extract this nested code block into a method.(İ…î½
+Bsquid:S1199"-Extract this nested code block into a method.(­Ó–Ô
+Esquid:S4524"+Move this default to the end of the switch.(Î—­Šşÿÿÿÿ
+}squid:S4144"cUpdate this method so that its implementation is not identical to "getServerInfoList" on line 2362.(¬ûšËÿÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ƒ¦†
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¤¢öøÿÿÿÿ
+>squid:S1905"*Remove this unnecessary cast to "Builder".(İ¤Â\
+,squid:S2176"Rename this class.(ºœÓ­úÿÿÿÿ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+Tsquid:S1161":Add the "@Override" annotation above this method signature(ÑÍ“Ëûÿÿÿÿ
+esquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Ûªë
+Tsquid:S1161":Add the "@Override" annotation above this method signature(»¤Å“ûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(ÑÍ“Ëûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(»¤Å“ûÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(öË·š
+jsquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ¬›Ôşÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(œè“
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(şËÆ
+xsquid:S00116"]Rename this field "serverInfoBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÔŒ®üÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(öË·š
+Qsquid:S2589"7Remove this expression which always evaluates to "true"(Œö£‘øÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(˜œö¾ûÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(”×Ñ¾
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ê„£
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+Lsquid:S1481"7Remove this unused "mutable_bitField0_" local variable.(ß”â¢
+Isquid:S1066"/Merge this if statement with the enclosing one.(âÊÁ‹ıÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(”×Ñ¾
+Bsquid:S1199"-Extract this nested code block into a method.(İ…î½
+>squid:S1905"*Remove this unnecessary cast to "Builder".(İ¤Â\
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Îõ¾Òûÿÿÿÿ
+isquid:S00116"NRename this field "id_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¹±•ûÿÿÿÿ
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¤¢öøÿÿÿÿ
+Qsquid:S2589"7Remove this expression which always evaluates to "true"(Œö£‘øÿÿÿÿ
+>squid:S1905"*Remove this unnecessary cast to "Builder".(İ¤Â\
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(Æ÷¾¢ûÿÿÿÿ
+fsquid:S00116"PRename this field "port_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Å ¼
+Gsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+jsquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ¬›Ôşÿÿÿÿ
+Isquid:S1066"/Merge this if statement with the enclosing one.(âÊÁ‹ıÿÿÿÿ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+?squid:S00108")Either remove or fill this block of code.(º„ç½
+ksquid:S00116"PRename this field "info_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÚÎÑıÿÿÿÿ
+€squid:S1845"fRename method "parser" to prevent any misunderstanding/clash with field "PARSER" defined on line 1532.(É¬™×ÿÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(¥ªóÃ
+Osquid:S1161":Add the "@Override" annotation above this method signature(œè“
+Osquid:S1161":Add the "@Override" annotation above this method signature(¿¸Ú©
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ê„£
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(Æ÷¾¢ûÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ƒ¦†
+msquid:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(¹õˆÏùÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ƒ¦†
+ssquid:S00116"XRename this field "maxUserCount_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù´¯‘ûÿÿÿÿ
+€squid:S1845"fRename method "parser" to prevent any misunderstanding/clash with field "PARSER" defined on line 6663.(»µÊ›üÿÿÿÿ
+Bsquid:S1199"-Extract this nested code block into a method.(ò‘
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(ˆÎ…•şÿÿÿÿ
+,squid:S2176"Rename this class.(ºœÓ­úÿÿÿÿ
+Bsquid:S1199"-Extract this nested code block into a method.(­Ó–Ô
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ê„£
+fsquid:S00116"PRename this field "type_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ÿ³é
+Osquid:S1161":Add the "@Override" annotation above this method signature(§ß—¡
+Osquid:S1161":Add the "@Override" annotation above this method signature(´çÍê
+msquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(±Ö¢q
+Osquid:S1161":Add the "@Override" annotation above this method signature(¿¸Ú©
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+Gsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+xsquid:S00116"]Rename this field "serverInfoBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÔŒ®üÿÿÿÿ
+,squid:S2176"Rename this class.(ºœÓ­úÿÿÿÿ
+hsquid:S00116"RRename this field "result_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€şìª
+Tsquid:S1161":Add the "@Override" annotation above this method signature(»¤Å“ûÿÿÿÿ
+lsquid:S00116"VRename this field "freeMemory_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½è‡û
+Osquid:S1161":Add the "@Override" annotation above this method signature(œè“
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Îõ¾Òûÿÿÿÿ
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(ˆÎ…•şÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(´çÍê
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Ã•Œƒüÿÿÿÿ
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(ˆÎ…•şÿÿÿÿ
+ksquid:S00116"VRename this field "serverInfo_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹Î®E
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+?squid:S00108")Either remove or fill this block of code.(º„ç½
+Dsquid:S1948"*Make "version_" transient or serializable.(„­ßİøÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(œè“
+msquid:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(˜œö¾ûÿÿÿÿ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+,squid:S2176"Rename this class.(ºœÓ­úÿÿÿÿ
+nsquid:S00116"SRename this field "version_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç˜…Õùÿÿÿÿ
+esquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“Àˆı
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒ°‡ıÿÿÿÿ
+Bsquid:S1199"-Extract this nested code block into a method.(§Î·­
+gsquid:S00116"QRename this field "wwwip_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ØÅ 
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(ˆÎ…•şÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(ÑÍ“Ëûÿÿÿÿ
+>squid:S1905"*Remove this unnecessary cast to "Builder".(İ¤Â\
+[squid:S1126"AReplace this if-then-else statement by a single return statement.(Œ°ë„şÿÿÿÿ
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(Æ÷¾¢ûÿÿÿÿ
+Qsquid:S2589"7Remove this expression which always evaluates to "true"(Œö£‘øÿÿÿÿ
+Qsquid:S2589"7Remove this expression which always evaluates to "true"(Œö£‘øÿÿÿÿ
+?squid:S00108")Either remove or fill this block of code.(º„ç½
+Csquid:S1940")Use the opposite operator ("!=") instead.(ÿÍùÿÿÿÿ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+osquid:S00116"TRename this field "httpport_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Ãêµùÿÿÿÿ
+msquid:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+Gsquid:S1199"-Extract this nested code block into a method.(­™Üıÿÿÿÿ
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¤¢öøÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ê„£
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ƒ¦†
+ksquid:S00116"PRename this field "info_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ„Úûÿÿÿÿ
+=squid:S1940")Use the opposite operator ("!=") instead.(ÉÁï_
+Tsquid:S1161":Add the "@Override" annotation above this method signature(ÑÍ“Ëûÿÿÿÿ
+ysquid:S4144"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 8989.(ş¸Ã±
+Osquid:S1161":Add the "@Override" annotation above this method signature(”×Ñ¾
+>squid:S1940")Use the opposite operator ("!=") instead.(ùùôÙ
+?squid:S00108")Either remove or fill this block of code.(º„ç½
+Bsquid:S1199"-Extract this nested code block into a method.(ò‘
+Osquid:S1161":Add the "@Override" annotation above this method signature(öË·š
+jsquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸Îßúÿÿÿÿ
+hsquid:S00116"RRename this field "roleId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğÊ¹­
+jsquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ¬›Ôşÿÿÿÿ
+lsquid:S00116"QRename this field "state_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ¿•Úüÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ƒ¦†
+?squid:S1905"*Remove this unnecessary cast to "Builder".(¥ùšÏ
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(ˆÎ…•şÿÿÿÿ
+fsquid:S00116"PRename this field "type_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ÿ³é
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¤¢öøÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(§ß—¡
+Gsquid:S1199"-Extract this nested code block into a method.(ÙšÖ­ùÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(¿¸Ú©
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Óğ“Œıÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(”×Ñ¾
+ssquid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+,squid:S2176"Rename this class.(ºœÓ­úÿÿÿÿ
+hsquid:S00116"RRename this field "result_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€şìª
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ƒ¦†
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¤¢öøÿÿÿÿ
+<squid:S1948"'Make "name_" transient or serializable.(áè±Í
+Csquid:S3077".Remove the "volatile" keyword from this field.(áè±Í
+Lsquid:S1481"7Remove this unused "mutable_bitField0_" local variable.(ß”â¢
+dsquid:S00116"NRename this field "id_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—‡Ñ÷
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¶„±øÿÿÿÿ
+Gsquid:S1199"-Extract this nested code block into a method.(”¤óˆüÿÿÿÿ
+nsquid:S00116"SRename this field "version_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„­ßİøÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(ÑÍ“Ëûÿÿÿÿ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+Osquid:S1161":Add the "@Override" annotation above this method signature(œè“
+fsquid:S00116"PRename this field "port_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Å ¼
+esquid:S00116"ORename this field "ids_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ÓõÆ
+Esquid:S4524"+Move this default to the end of the switch.(Î—­Šşÿÿÿÿ
+Csquid:S1940")Use the opposite operator ("!=") instead.(ÃÛ–íøÿÿÿÿ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+lsquid:S00116"VRename this field "freeMemory_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½è‡û
+Esquid:S4524"+Move this default to the end of the switch.(Î—­Šşÿÿÿÿ
+Bsquid:S1199"-Extract this nested code block into a method.(­Ó–Ô
+msquid:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+Bsquid:S1199"-Extract this nested code block into a method.(İ…î½
+Lsquid:S1481"7Remove this unused "mutable_bitField0_" local variable.(ß”â¢
+Gsquid:S1199"-Extract this nested code block into a method.(ÙšÖ­ùÿÿÿÿ
+Esquid:S4524"+Move this default to the end of the switch.(Î—­Šşÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(öË·š
+[squid:S1126"AReplace this if-then-else statement by a single return statement.(âÊÁ‹ıÿÿÿÿ
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¤¢öøÿÿÿÿ
+>squid:S1905"*Remove this unnecessary cast to "Builder".(İ¤Â\
+Osquid:S1161":Add the "@Override" annotation above this method signature(¿¸Ú©
+Osquid:S1161":Add the "@Override" annotation above this method signature(öË·š
+Gsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+Osquid:S1161":Add the "@Override" annotation above this method signature(œè“
+lsquid:S00116"VRename this field "serverType_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º€Åˆ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+osquid:S00116"TRename this field "serverId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı¾—›üÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(»¤Å“ûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Îõ¾Òûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Ã•Œƒüÿÿÿÿ
+Esquid:S4524"+Move this default to the end of the switch.(Î—­Šşÿÿÿÿ
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(ˆÎ…•şÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(´çÍê
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ƒ¦†
+ssquid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+Osquid:S1161":Add the "@Override" annotation above this method signature(”×Ñ¾
+msquid:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+lsquid:S00116"VRename this field "serverType_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º€Åˆ
+[squid:S1126"AReplace this if-then-else statement by a single return statement.(•®ŠËüÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(ÑÍ“Ëûÿÿÿÿ
+isquid:S00116"NRename this field "id_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¹±•ûÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(¿¸Ú©
+Bsquid:S1199"-Extract this nested code block into a method.(ò‘
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Îõ¾Òûÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(¿¸Ú©
+Tsquid:S1161":Add the "@Override" annotation above this method signature(»¤Å“ûÿÿÿÿ
+Gsquid:S1199"-Extract this nested code block into a method.(­™Üıÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(¥ªóÃ
+msquid:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+msquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(±Ö¢q
+Bsquid:S1199"-Extract this nested code block into a method.(İ…î½
+lsquid:S00116"VRename this field "serverType_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º€Åˆ
+Gsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+fsquid:S00116"PRename this field "type_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ÿ³é
+Osquid:S1161":Add the "@Override" annotation above this method signature(”×Ñ¾
+>squid:S1940")Use the opposite operator ("!=") instead.(ÂÓ§“
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+Bsquid:S1199"-Extract this nested code block into a method.(­Ó–Ô
+Osquid:S1161":Add the "@Override" annotation above this method signature(§ß—¡
+jsquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ¬›Ôşÿÿÿÿ
+Esquid:S4524"+Move this default to the end of the switch.(Î—­Šşÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(¹õˆÏùÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(¥ùšÏ
+Qsquid:S2589"7Remove this expression which always evaluates to "true"(Œö£‘øÿÿÿÿ
+esquid:S00116"ORename this field "mid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÃ·‚
+Isquid:S1172"/Remove this unused method parameter "registry".(•óÊõÿÿÿÿÿ
+>squid:S1905"*Remove this unnecessary cast to "Builder".(İ¤Â\
+msquid:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Îõ¾Òûÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(¥ªóÃ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Ã•Œƒüÿÿÿÿ
+,squid:S2176"Rename this class.(ºœÓ­úÿÿÿÿ
+Qsquid:S2589"7Remove this expression which always evaluates to "true"(Œö£‘øÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(¿¸Ú©
+Bsquid:S1199"-Extract this nested code block into a method.(­Ó–Ô
+ssquid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+?squid:S00108")Either remove or fill this block of code.(º„ç½
+Bsquid:S1199"-Extract this nested code block into a method.(¡’ÜÉ
+Gsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(¹õˆÏùÿÿÿÿ
+~squid:S4144"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 4009.(ùˆß€ÿÿÿÿÿ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+Dsquid:S1905"*Remove this unnecessary cast to "Builder".(Æ÷¾¢ûÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ƒ¦†
+?squid:S1905"*Remove this unnecessary cast to "Builder".(ê„£
+>squid:S1905"*Remove this unnecessary cast to "Builder".(İ¤Â\
+`squid:S1192"KDefine a constant instead of duplicating this literal "ServerInfo" 3 times.(ó„µ­
+Osquid:S1161":Add the "@Override" annotation above this method signature(¥ªóÃ
+ssquid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+Bsquid:S1199"-Extract this nested code block into a method.(¾ø‚©
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¤¢öøÿÿÿÿ
+Lsquid:S1481"7Remove this unused "mutable_bitField0_" local variable.(ß”â¢
+Osquid:S1161":Add the "@Override" annotation above this method signature(”×Ñ¾
+?squid:S1905"*Remove this unnecessary cast to "Builder".(¥ùšÏ
+Esquid:S4524"+Move this default to the end of the switch.(Î—­Šşÿÿÿÿ
+ksquid:S00116"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+Gsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+~squid:S4144"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 2151.(á©«Œüÿÿÿÿ
+?squid:S1905"*Remove this unnecessary cast to "Builder".(¥ùšÏ
+Tsquid:S1161":Add the "@Override" annotation above this method signature(˜œö¾ûÿÿÿÿ
+Bsquid:S1199"-Extract this nested code block into a method.(­Ó–Ô
+Bsquid:S1199"-Extract this nested code block into a method.(­Ó–Ô
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+€squid:S1845"fRename method "parser" to prevent any misunderstanding/clash with field "PARSER" defined on line 4631.(ÄîËıÿÿÿÿ
+hsquid:S00116"RRename this field "online_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àúãÔ
+Osquid:S1161":Add the "@Override" annotation above this method signature(´çÍê
+lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ÿ®²Œûÿÿÿÿ
+ssquid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+Lsquid:S1481"7Remove this unused "mutable_bitField0_" local variable.(ß”â¢

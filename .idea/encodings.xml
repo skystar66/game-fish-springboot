@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/game-cluster" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/game-engine" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/game-gate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/game-handler" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/game-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/game-message" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/game-model" charset="UTF-8" />
+  </component>
+</project>

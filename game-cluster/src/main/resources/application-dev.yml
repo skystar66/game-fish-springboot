@@ -1,0 +1,64 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: game-cluster
+
+REDIS_IP: 127.0.0.1
+logging:
+ config: classpath:spring-logback.xml
+
+mail:
+  mailSmtpHost: smtp.qq.com
+  mailSmtpSslEnable: false
+  mailSmtpAuth: true
+  sendUser: 2755055412@qq.com
+  password: Jzy3591
+  reciveUser: 2432271225@qq.com
+
+threadpool-http:
+  name: 默认线程池执行器:0
+  corePoolSize: 100
+  maxPoolSize: 300
+  keepAliveTime: 30
+threadpool-tcp:
+  name: 默认线程池执行器:0
+  corePoolSize: 10
+  maxPoolSize: 50
+  keepAliveTime: 30
+  heart: 1000
+mina-tcp:
+  port: 8000
+  orderedThreadPoolExecutorSize: 10
+  receiveBufferSize: 1048576
+  sendBufferSize: 1048576
+  reuseAddress: true
+  tcpNoDelay: true
+  readerIdleTime: 1200
+  writerIdleTime: 1200
+  soLinger: 0
+mina-http:
+  httpPort: 8001
+  orderedThreadPoolExecutorSize: 10
+  receiveBufferSize: 1048576
+  sendBufferSize: 1048576
+  reuseAddress: true
+  tcpNoDelay: true
+  readerIdleTime: 1200
+  writerIdleTime: 1200
+  soLinger: 0
+
+redis:
+  nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004,127.0.0.1:7005,127.0.0.1:7006
+  poolMaxTotal: 500
+  poolMaxIdle: 5
+  connectionTimeout: 2000
+  soTimeout: 2000
+  maxRedirections: 6
+  timeBetweenEvictionRunsMillis: 30000
+  minEvictableIdleTimeMillis: 1800000
+  softMinEvictableIdleTimeMillis: 1800000
+  maxWaitMillis: 60000
+  testOnBorrow: true
+  testWhileIdle: false
+  testOnReturn: false

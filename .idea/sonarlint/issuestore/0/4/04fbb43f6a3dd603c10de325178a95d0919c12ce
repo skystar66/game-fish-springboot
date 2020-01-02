@@ -1,0 +1,20 @@
+
+|
+squid:S135Â"YReduce the total number of break and continue statements in this loop to use at most one.(Ï—ë±ÿÿÿÿÿ8ğúÀ±ô-
+Ksquid:S1604d"(Make this anonymous inner class a lambda(ÎÌı–ùÿÿÿÿ8ğúÀ±ô-
+Vsquid:S2629ì"7Use the built-in formatting to construct this argument.(ªñ²Ğ8ğúÀ±ô-
+osquid:CommentedOutCodeLineØ"<This block of commented-out lines of code should be removed.(‚Ùš´üÿÿÿÿ8ğúÀ±ô-
+qsquid:S3776´"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(İşæ…8ğúÀ±ô-
+esquid:S3457¼"AFormat specifiers should be used instead of string concatenation.(ç Œæûÿÿÿÿ8ğúÀ±ô-
+msquid:S4042é"IUse "java.nio.Files#delete" here for better messages on error conditions.(ë“«øÿÿÿÿ8ğúÀ±ô-
+usquid:S3776a"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(„ŠÖ×şÿÿÿÿ8ğúÀ±ô-
+`squid:S1126×"AReplace this if-then-else statement by a single return statement.(¬˜İì8ğúÀ±ô-
+Rsquid:S1066F"/Merge this if statement with the enclosing one.(©ë˜œûÿÿÿÿ8ğúÀ±ô-
+[squid:S2629ğ"7Use the built-in formatting to construct this argument.(êûÊôüÿÿÿÿ8ğúÀ±ô-
+`squid:S3457ì"AFormat specifiers should be used instead of string concatenation.(ªñ²Ğ8ğúÀ±ô-
+hsquid:S4042×"IUse "java.nio.Files#delete" here for better messages on error conditions.(¬˜İì8ğúÀ±ô-
+esquid:S3457ğ"AFormat specifiers should be used instead of string concatenation.(êûÊôüÿÿÿÿ8ğúÀ±ô-
+~squid:S1149Ÿ"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰8ğúÀ±ô-
+[squid:S2629¼"7Use the built-in formatting to construct this argument.(ç Œæûÿÿÿÿ8ğúÀ±ô-
+ssquid:S2095›"OUse try-with-resources or close this "InputStreamReader" in a "finally" clause.(ïÈØœşÿÿÿÿ8ğúÀ±ô-
+ksquid:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(âûáş8ğúÀ±ô-

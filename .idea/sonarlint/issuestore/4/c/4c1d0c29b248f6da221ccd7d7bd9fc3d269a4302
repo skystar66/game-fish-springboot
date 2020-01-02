@@ -1,0 +1,19 @@
+
+Fsquid:S00108")Either remove or fill this block of code.(”ı¾8ö·‡ô-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(™Û‰¿úÿÿÿÿ8ö·‡ô-
+~squid:S1488"]Immediately return this expression instead of assigning it to the temporary variable "msgID".(ÈéÇ¸şÿÿÿÿ8ö·‡ô-
+¢%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(âÅµú8ö·‡ô-
+~squid:S1488"]Immediately return this expression instead of assigning it to the temporary variable "msgID".(¼¼Äüÿÿÿÿ8ö·‡ô-
+csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(’ß°½8ö·‡ô-
+Tsquid:S3878"8Remove this array creation and simply pass the elements.(³¹ Ù8ö·‡ô-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(…º¾„úÿÿÿÿ8ö·‡ô-
+]squid:S3457"AFormat specifiers should be used instead of string concatenation.(¡ëÛ8ö·‡ô-
+xsquid:S2629"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(¡ëÛ8ö·‡ô-
+squid:S1488"`Immediately return this expression instead of assigning it to the temporary variable "clientIP".(ê÷üéşÿÿÿÿ8ö·‡ô-
+csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(âÅµú8ö·‡ô-
+ˆsquid:S1845"mRename method "toIobuffer" to prevent any misunderstanding/clash with method "toIoBuffer" defined on line 36.(Îµ‰j8ö·‡ô-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(œ‡™øÿÿÿÿÿ8ö·‡ô-
+wsquid:S1488"[Immediately return this expression instead of assigning it to the temporary variable "uID".(†¦ß8ö·‡ô-
+Tsquid:UselessParenthesesCheck"!Remove these useless parentheses.(É¨Ñ‹üÿÿÿÿ8ö·‡ô-
+@squid:S2629"$Invoke method(s) only conditionally.(›ºÀ©8ö·‡ô-
+lsquid:UselessImportCheck"CRemove this unused import 'org.apache.mina.core.service.IoService'.(÷¤Öœ8ö·‡ô-

@@ -1,0 +1,4 @@
+
+ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(ØÐßéùÿÿÿÿ8“ã¼§ï-
+vsquid:UselessImportCheck"HRemove this unused import 'com.xl.game.config.ThreadPoolExecutorConfig'.(µ´Êíúÿÿÿÿ8“ã¼§ï-
+csquid:UselessImportCheck":Remove this unused import 'com.xl.game.config.MailConfig'.(ÀýÔ¼8“ã¼§ï-

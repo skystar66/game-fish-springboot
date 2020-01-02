@@ -1,0 +1,10 @@
+
+nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(“–ýþ8íšº§ï-
+zsquid:S00116"XRename this field "command_queue" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ý™üóûÿÿÿÿ8íšº§ï-
+Jsquid:S1068".Remove this unused "mailConfig" private field.(¥°‚©8íšº§ï-
+jsquid:S3014"IRemove this use of "ThreadGroup". Prefer the use of "ThreadPoolExecutor".(©Š®åùÿÿÿÿ8íšº§ï-
+bsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8íšº§ï-
+Qsquid:S2446"0"notify" may not wake up the appropriate thread.(óÄ£¶øÿÿÿÿ8íšº§ï-
+~squid:S1450"]Remove the "lastExcuteTime" field and declare it as a local variable in the relevant methods.(úÓ£Îøÿÿÿÿ8íšº§ï-
+Qsquid:S2446"0"notify" may not wake up the appropriate thread.(óÄ£¶øÿÿÿÿ8íšº§ï-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ß·¾8íšº§ï-

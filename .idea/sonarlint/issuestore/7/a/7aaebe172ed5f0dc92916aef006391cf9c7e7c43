@@ -1,0 +1,7 @@
+
+Asquid:S1481",Remove this unused "freepro" local variable.(Á±ÍÐ
+Asquid:S1481"'Remove this unused "sb" local variable.(¸ˆñßÿÿÿÿÿ
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ùƒ»Ñúÿÿÿÿ
+–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(êò—×
+–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÖãþÚ
+ysquid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(¸ˆñßÿÿÿÿÿ
