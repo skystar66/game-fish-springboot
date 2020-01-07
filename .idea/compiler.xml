@@ -6,15 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="game-bydr" />
         <module name="game-cluster" />
         <module name="game-engine" />
         <module name="game-gate" />
         <module name="game-hall" />
-        <module name="game-handler" />
         <module name="game-manager" />
         <module name="game-message" />
         <module name="game-model" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="game-handler" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
