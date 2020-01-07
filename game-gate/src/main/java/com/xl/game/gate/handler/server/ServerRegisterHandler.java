@@ -25,6 +25,7 @@ public class ServerRegisterHandler extends TcpHandler {
 
     @Override
     public void run() {
+        log.info("网关服收到注册请求，正在处理。。。。。。");
         ServerMessage.ServerRegisterRequest req = getMsg();
         ServerMessage.ServerInfo serverInfo = req.getServerInfo();
         ServerInfo gameInfo = ServerManager.getInstance().getGameServerInfo(ServerType.valueof(serverInfo.getType()),

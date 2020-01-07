@@ -11,6 +11,7 @@ import com.xl.game.model.redis.key.HallKey;
 import com.xl.game.redis.manager.JedisManager;
 import com.xl.game.util.Config;
 import com.xl.game.util.MsgUtil;
+import com.xl.game.util.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
@@ -28,12 +29,17 @@ import java.util.Map;
 @Slf4j
 public class QuitSubGameReqHandler extends TcpHandler {
 
+    private JedisManager jedisManager;
+
 
     @Override
     public void run() {
 
         log.info("退出子游戏处理器。。。。。。");
 
+        if (jedisManager == null) {
+            jedisManager = SpringUtil.getBean(JedisManager.class);
+        }
         HallLoginMessage.QuitSubGameRequest request = getMsg();
         Object attribute = getSession().getAttribute(Config.USER_SESSION);
         if (attribute == null) {
@@ -54,6 +60,6 @@ public class QuitSubGameReqHandler extends TcpHandler {
         Map<String, String> redisMap = new HashMap<String, String>();
         redisMap.put("gameType", ServerType.NONE.toString());
         redisMap.put("gameId", String.valueOf(0));
-        JedisManager.getJedisCluster().hmset(key, redisMap);
+        jedisManager.getJedisCluster().hmset(key, redisMap);
     }
 }

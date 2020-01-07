@@ -55,7 +55,7 @@ public class ServerManager {
      * @return
      */
     public ServerInfo getGameServerInfo(ServerType serverType, Integer serverId) {
-        if (null != serverMap) {
+        if (serverMap.containsKey(serverType)) {
             return serverMap.get(serverType).get(serverId);
         }
         return null;

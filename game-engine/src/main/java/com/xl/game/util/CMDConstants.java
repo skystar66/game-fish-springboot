@@ -45,4 +45,8 @@ public class CMDConstants {
      */
 
     public static final String SERVER_GATE_URL = "/server/gate/ip";
+
+
+
+    public static final String GM_CHAT_URL="/gm";
 }

@@ -12,6 +12,7 @@ import com.xl.game.message.system.SystemMessage;
 import com.xl.game.model.redis.key.HallKey;
 import com.xl.game.redis.manager.JedisManager;
 import com.xl.game.thread.ThreadType;
+import com.xl.game.util.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -27,11 +28,17 @@ import lombok.extern.slf4j.Slf4j;
 public class LoginResHandler extends TcpHandler {
 
 
+    private JedisManager jedisManager;
     @Override
     public void run() {
 
         log.info("登录返回处理器。。。。。。");
 
+
+        if (jedisManager == null) {
+
+            jedisManager = SpringUtil.getBean(JedisManager.class);
+        }
         HallLoginMessage.LoginResponse response = getMsg();
         UserSession userSession = UserSessionManager.getInstance().getUserSessionBySessionId(response.getSessionId());
 
@@ -42,7 +49,7 @@ public class LoginResHandler extends TcpHandler {
             return;
         }
         String key = HallKey.Role_Map_Info.getKey(userSession.getRoleId());
-        JedisManager.getJedisCluster().hset(key, "hallId", String.valueOf(userSession.getHallServerId()));
+        jedisManager.hset(key, "hallId", String.valueOf(userSession.getHallServerId()));
         UserSessionManager.getInstance().loginHallSuccess(userSession, response.getUid(), response.getRid());
         userSession.sendToClient(response);
 

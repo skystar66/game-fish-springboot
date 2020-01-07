@@ -39,7 +39,7 @@ public class SingleMinaTcpClientService extends MinaClientService {
 
     @Override
     public void checkStatus() {
-//        tcpClient
+        tcpClient.checkStatus();
     }
 
     @Override

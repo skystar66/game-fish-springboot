@@ -41,8 +41,8 @@ public class ServerListHandler extends TcpHandler {
                     }
                 });
             }
-            log.info("获取非游戏服务器成功：{}", resBuilder);
-            getSession().write(resBuilder);
+            log.info("获取非游戏服务器成功：{}");
+            getSession().write(resBuilder.build());
         } else {
             //获取游戏服，大厅服 （网管需要获取游戏服，大厅服）
             ServerMessage.ServerListResponse.Builder resBuilder = ServerMessage.ServerListResponse.newBuilder();
@@ -57,7 +57,7 @@ public class ServerListHandler extends TcpHandler {
                     });
                 }
             });
-            log.info("获取游戏服务器|大厅服务器成功：{}", resBuilder);
+            log.info("获取游戏服务器|大厅服务器成功：{}");
             getSession().write(resBuilder.build());
         }
     }

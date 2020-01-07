@@ -93,7 +93,7 @@ public abstract class MinaClientService extends Service implements ITcpClientSer
     /**
      * 发送消息
      *
-     * @param obj
+     * @param object
      * @return
      */
     @Override
@@ -131,5 +131,11 @@ public abstract class MinaClientService extends Service implements ITcpClientSer
 
     }
 
+    public MinaClientConfig getMinaClientConfig() {
+        return minaClientConfig;
+    }
 
+    public MailConfig getMailConfig() {
+        return mailConfig;
+    }
 }

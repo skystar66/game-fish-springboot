@@ -37,6 +37,8 @@
         <module>game-message</module>
         <module>game-model</module>
         <module>game-handler</module>
+        <module>game-hall</module>
+        <module>game-bydr</module>
     </modules>
 
     <dependencies>
@@ -54,10 +56,10 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-actuator</artifactId>-->
+        <!--</dependency>-->
 
         <!--apache commons-->
         <dependency>

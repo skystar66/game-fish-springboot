@@ -7,7 +7,7 @@ package com.xl.game.server;
  * @QQ 359135103
  * 2017年8月29日 上午10:31:07
  */
-public interface ITcpClientService extends Runnable{
+public interface ITcpClientService{
 
 
 

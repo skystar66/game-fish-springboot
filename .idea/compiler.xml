@@ -9,6 +9,7 @@
         <module name="game-cluster" />
         <module name="game-engine" />
         <module name="game-gate" />
+        <module name="game-hall" />
         <module name="game-handler" />
         <module name="game-manager" />
         <module name="game-message" />

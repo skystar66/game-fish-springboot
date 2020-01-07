@@ -29,8 +29,7 @@ public class JedisManager {
 
     @Autowired
     JedisClusterConfig config;
-    private static JedisCluster jedisCluster;
-    private static JedisManager redisManager;
+    private JedisCluster jedisCluster;
 
 
     private Map<String, String> keysShaMap; // key:脚本名称
@@ -62,11 +61,11 @@ public class JedisManager {
         poolConfig.setTestOnBorrow(config.isTestOnBorrow());
         poolConfig.setTestWhileIdle(config.isTestWhileIdle());
         poolConfig.setTestOnReturn(config.isTestOnReturn());
-//		jedisCluster = new JedisCluster(jedisClusterNodes, config.getConnectionTimeout(), config.getSoTimeout(),
-//				config.getMaxRedirections(), poolConfig);
-        //todo  先用单节点代替
-        jedisCluster = new JedisCluster(jedisClusterNodes.iterator().next(), config.getConnectionTimeout(), config.getSoTimeout(),
+        jedisCluster = new JedisCluster(jedisClusterNodes, config.getConnectionTimeout(), config.getSoTimeout(),
                 config.getMaxRedirections(), poolConfig);
+        //todo  先用单节点代替
+//        jedisCluster = new JedisCluster(jedisClusterNodes.iterator().next(), config.getConnectionTimeout(), config.getSoTimeout(),
+//                config.getMaxRedirections(), poolConfig);
     }
 
 
@@ -96,16 +95,16 @@ public class JedisManager {
      * 清除脚本缓存
      */
     public void scriptFlush(String fileName) {
-        getJedisCluster().scriptFlush(fileName.getBytes());
+        jedisCluster.scriptFlush(fileName.getBytes());
     }
 
-    public static JedisCluster getJedisCluster() {
-        return jedisCluster;
-    }
+//    public static JedisCluster getJedisCluster() {
+//        return jedisCluster;
+//    }
 
-    public static void setRedisManager(JedisManager redisManager) {
-        JedisManager.redisManager = redisManager;
-    }
+//    public static void setRedisManager(JedisManager redisManager) {
+//        JedisManager.redisManager = redisManager;
+//    }
 
     /**
      * 初始化脚本
@@ -120,7 +119,7 @@ public class JedisManager {
         if (script == null || script.length() < 1) {
             throw new Exception(path + "/" + fileName + ".lua 加载出错");
         }
-        String hash = getJedisCluster().scriptLoad(script, fileName);
+        String hash = jedisCluster.scriptLoad(script, fileName);
         if (hash == null || hash.length() < 1) {
             throw new Exception(fileName + ".lua 脚本注入出错");
         }
@@ -163,7 +162,7 @@ public class JedisManager {
         if (sha == null) {
             return null;
         }
-        Object object = getJedisCluster().evalsha(sha, keys, args);
+        Object object = jedisCluster.evalsha(sha, keys, args);
         if (object == null) {
             return null;
         }
@@ -182,7 +181,7 @@ public class JedisManager {
      */
     @SuppressWarnings("unchecked")
     public <K, V> Map<K, V> hgetAll(final String key, final Class<K> keyClass, final Class<V> valueClass) {
-        Map<String, String> hgetAll = getJedisCluster().hgetAll(key);
+        Map<String, String> hgetAll = jedisCluster.hgetAll(key);
         if (hgetAll == null) {
             return null;
         }
@@ -203,11 +202,16 @@ public class JedisManager {
      * @QQ 359135103 2017年10月24日 上午10:08:43
      */
     public <V> V hget(final String key, final Object field, Class<V> clazz) {
-        String hget = getJedisCluster().hget(key, field.toString());
+        String hget = jedisCluster.hget(key, field.toString());
         if (hget == null) {
             return null;
         }
         return JsonUtil.parseObject(hget, clazz);
+    }
+
+
+    public JedisCluster getJedisCluster() {
+        return jedisCluster;
     }
 
     /**
@@ -222,7 +226,7 @@ public class JedisManager {
      * 2017年10月24日 上午10:13:21
      */
     public Long hset(final String key, final Object field, final Object value) {
-        return getJedisCluster().hset(key, field.toString(), JsonUtil.toJSONStringWriteClassNameWithFiled(value));
+        return jedisCluster.hset(key, field.toString(), JsonUtil.toJSONStringWriteClassNameWithFiled(value));
     }
 
     /**

@@ -163,7 +163,7 @@ public class MinaTcpClient implements Runnable {
                 log.info("连接到服务器失败：" + minaClienConnToConfig);
                 break;
             } else {
-                log.info("连接服务器成功！{}:{}", minaClienConnToConfig.getHost(), minaClienConnToConfig.getPort());
+                log.info("连接服务器成功！ 目标类型 ：{} ", minaClienConnToConfig);
             }
         }
     }
@@ -178,7 +178,13 @@ public class MinaTcpClient implements Runnable {
     /**状态监测*/
     public void checkStatus(){
 
+        if (connector.getManagedSessionCount() < maxConnectCount ||
+                connector.getManagedSessions().size() < maxConnectCount) {
+            connect();
+        }
     }
 
-
+    public MinaClientService getService() {
+        return service;
+    }
 }

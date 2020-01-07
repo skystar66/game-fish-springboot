@@ -21,6 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ChatResHandler extends TcpHandler {
     @Override
     public void run() {
+        log.info("网关返回聊天消息");
         HallChatMessage.ChatResponse res = getMsg();
         switch (res.getChatType()) {
             case PRIVATE: //在当前网关转发

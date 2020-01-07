@@ -1,6 +1,6 @@
 
-Dsquid:S1604"(Make this anonymous inner class a lambda(ÉãÃ®8ııÂĞí-
-asquid:S2147"ECombine this catch with the one at line 115, which has the same body.(°±âİ8ııÂĞí-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éÁ¨ºøÿÿÿÿ8ııÂĞí-
 Jsquid:S3077".Remove the "volatile" keyword from this field.(•ŞˆÎ8ııÂĞí-
 Vsquid:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ııÂĞí-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éÁ¨ºøÿÿÿÿ8ııÂĞí-
+Dsquid:S1604"(Make this anonymous inner class a lambda(ÉãÃ®8ııÂĞí-
+asquid:S2147"ECombine this catch with the one at line 115, which has the same body.(°±âİ8ııÂĞí-

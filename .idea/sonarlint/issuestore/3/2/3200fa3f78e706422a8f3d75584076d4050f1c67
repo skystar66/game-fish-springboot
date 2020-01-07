@@ -1,15 +1,15 @@
 
-Nsquid:S3958"2Refactor the code so this stream pipeline is used.(ãâı8ş„ò‡ô-
-Qsquid:S2065"0Remove the "transient" modifier from this field.(·‚·§úÿÿÿÿ8ş„ò‡ô-
-Qsquid:S2065"0Remove the "transient" modifier from this field.(Î¡¸øÿÿÿÿ8ş„ò‡ô-
-Qsquid:S2065"0Remove the "transient" modifier from this field.(ñ©—¿øÿÿÿÿ8ş„ò‡ô-
 ;squid:S2885"Make "DF" an instance variable.(Ğÿôê8ş„ò‡ô-
+Qsquid:S2065"0Remove the "transient" modifier from this field.(Î¡¸øÿÿÿÿ8ş„ò‡ô-
+Bsquid:S1068"&Remove this unused "DF" private field.(Ğÿôê8ş„ò‡ô-
+bsquid:HiddenFieldCheck";Rename "session" which hides the field declared at line 53.(²ü¹ß8ş„ò‡ô-
+]squid:S3457"AFormat specifiers should be used instead of string concatenation.(²‰8ş„ò‡ô-
+Nsquid:S3958"2Refactor the code so this stream pipeline is used.(ãâı8ş„ò‡ô-
 gsquid:HiddenFieldCheck";Rename "channel" which hides the field declared at line 60.(ó½Ó¼üÿÿÿÿ8ş„ò‡ô-
 Ssquid:S2589"7Remove this expression which always evaluates to "true"(ãıØÌ8ş„ò‡ô-
-]squid:S3457"AFormat specifiers should be used instead of string concatenation.(²‰8ş„ò‡ô-
-Ssquid:S2629"7Use the built-in formatting to construct this argument.(²‰8ş„ò‡ô-
+Qsquid:S2065"0Remove the "transient" modifier from this field.(·‚·§úÿÿÿÿ8ş„ò‡ô-
 ¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŞòÕ½øÿÿÿÿ8ş„ò‡ô-
 Qsquid:S2065"0Remove the "transient" modifier from this field.(Ÿê¯ïüÿÿÿÿ8ş„ò‡ô-
-bsquid:HiddenFieldCheck";Rename "session" which hides the field declared at line 53.(²ü¹ß8ş„ò‡ô-
-Bsquid:S1068"&Remove this unused "DF" private field.(Ğÿôê8ş„ò‡ô-
+Ssquid:S2629"7Use the built-in formatting to construct this argument.(²‰8ş„ò‡ô-
 Nsquid:S3958"2Refactor the code so this stream pipeline is used.(´¿•Ÿ8°ô’¬ô-
+Qsquid:S2065"0Remove the "transient" modifier from this field.(ñ©—¿øÿÿÿÿ8ş„ò‡ô-

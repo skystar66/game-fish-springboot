@@ -58,8 +58,10 @@ public class Role extends Person {
             try {
                 Object value = method.invoke(this);
                 if (value != null) {
+                    JedisManager jedisManager = SpringUtil.getBean(JedisManager.class);
+
                     // 使用redisson
-                    JedisManager.getJedisCluster().hset(key, propertiesName, value.toString());
+                    jedisManager.getJedisCluster().hset(key, propertiesName, value.toString());
                     // RMap<String, Object> map = RedissonManager.getRedissonClient().getMap(key);
                     // map.put(propertiesName, value);
                 } else {
@@ -144,7 +146,9 @@ public class Role extends Person {
      */
     public long getItemCount() {
         String key = HallKey.Role_Map_Packet.getKey(id);
-        return JedisManager.getJedisCluster().hlen(key);
+        JedisManager jedisManager = SpringUtil.getBean(JedisManager.class);
+
+        return jedisManager.getJedisCluster().hlen(key);
     }
 
 
@@ -159,7 +163,9 @@ public class Role extends Person {
      */
     public Item getItem(long itemId) {
         String key = HallKey.Role_Map_Packet.getKey(id);
-        String hget = JedisManager.getJedisCluster().hget(key, String.valueOf(itemId));
+        JedisManager jedisManager = SpringUtil.getBean(JedisManager.class);
+
+        String hget = jedisManager.getJedisCluster().hget(key, String.valueOf(itemId));
         if (hget == null) {
             return null;
         }
@@ -203,6 +209,8 @@ public class Role extends Person {
      * 2017年9月26日 下午5:06:51
      */
     public void saveToRedis() {
-        JedisManager.getJedisCluster().hmset(getRoleRedisKey(), JsonUtil.object2Map(this));
+        JedisManager jedisManager = SpringUtil.getBean(JedisManager.class);
+
+        jedisManager.getJedisCluster().hmset(getRoleRedisKey(), JsonUtil.object2Map(this));
     }
 }

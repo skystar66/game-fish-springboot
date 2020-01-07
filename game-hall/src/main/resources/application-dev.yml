@@ -1,0 +1,86 @@
+server:
+  port: 10003
+spring:
+  application:
+    name: game-cluster
+
+REDIS_IP: 127.0.0.1
+logging:
+ config: classpath:spring-logback.xml
+
+mail:
+  mailSmtpHost: smtp.qq.com
+  mailSmtpSslEnable: false
+  mailSmtpAuth: true
+  sendUser: 2755055412@qq.com
+  password: Jzy3591
+  reciveUser: 2432271225@qq.com
+
+threadpool-tcp:
+  name: 游戏线程池执行器:0
+  corePoolSize: 20
+  maxPoolSize: 300
+  keepAliveTime: 30
+  heart: 1000
+mina-cluster-client:
+  id: 1
+  orderedThreadPoolExecutorSize: 2
+  receiveBufferSize: 1048576
+  sendBufferSize: 1048576
+  soLinger: 0
+  type: HALL
+  maxConnectCount: 1
+  connTo:
+    receiveBufferSize: 1048576
+    sendBufferSize: 1048576
+    type: CLUSTER
+    host: 127.0.0.1
+    port: 8000
+mina-gate-client:
+  id: 1
+  orderedThreadPoolExecutorSize: 2
+  receiveBufferSize: 1048576
+  sendBufferSize: 1048576
+  soLinger: 0
+  type: HALL
+  name: 大厅1服
+  maxConnectCount: 1
+  connTo:
+    receiveBufferSize: 1048576
+    sendBufferSize: 1048576
+    type: CLUSTER
+    host: 127.0.0.1
+    port: 8520
+mina-http:
+  httpPort: 9102
+  ip: 127.0.0.1
+  orderedThreadPoolExecutorSize: 5
+  receiveBufferSize: 204800
+  sendBufferSize: 204800
+  reuseAddress: true
+  tcpNoDelay: true
+  readerIdleTime: 30
+  writerIdleTime: 30
+  soLinger: 5
+redis:
+  nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004,127.0.0.1:7005,127.0.0.1:7006
+  poolMaxTotal: 500
+  poolMaxIdle: 5
+  connectionTimeout: 2000
+  soTimeout: 2000
+  maxRedirections: 6
+  timeBetweenEvictionRunsMillis: 30000
+  minEvictableIdleTimeMillis: 1800000
+  softMinEvictableIdleTimeMillis: 1800000
+  maxWaitMillis: 60000
+  testOnBorrow: true
+  testWhileIdle: false
+  testOnReturn: false
+mongo:
+  dbName: bydr_gate
+  url: mongodb://127.0.0.1:27017
+mq:
+  user: admin
+  password: admin
+  host: 127.0.0.1
+  port: 61616

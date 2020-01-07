@@ -7,6 +7,8 @@ import com.xl.game.model.redis.key.HallKey;
 import com.xl.game.redis.manager.JedisManager;
 import com.xl.game.util.Config;
 import com.xl.game.util.JsonUtil;
+import com.xl.game.util.SpringUtil;
+import lombok.Data;
 import org.mongodb.morphia.annotations.Entity;
 import org.redisson.api.RRemoteService;
 
@@ -23,6 +25,7 @@ import java.util.Date;
  */
 @JSONType(serialzeFeatures = SerializerFeature.WriteClassName)
 @Entity(value = "item", noClassnameStored = true)
+@Data
 public class Item {
 
 	@JSONField
@@ -43,6 +46,7 @@ public class Item {
 
 	public void saveToRedis(long roleId) {
 		String key = HallKey.Role_Map_Packet.getKey(roleId);
-		JedisManager.getJedisCluster().hset(key, String.valueOf(id), JsonUtil.toJSONString(this));
+		 JedisManager jedisManager = SpringUtil.getBean(JedisManager.class);
+		jedisManager.getJedisCluster().hset(key, String.valueOf(id), JsonUtil.toJSONString(this));
 	}
 }

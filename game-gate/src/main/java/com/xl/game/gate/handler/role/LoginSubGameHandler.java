@@ -13,6 +13,7 @@ import com.xl.game.message.hall.HallLoginMessage;
 import com.xl.game.message.system.SystemMessage;
 import com.xl.game.model.redis.key.HallKey;
 import com.xl.game.redis.manager.JedisManager;
+import com.xl.game.util.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
@@ -29,10 +30,18 @@ import java.util.Map;
 public class LoginSubGameHandler extends TcpHandler {
 
 
+
+    private JedisManager jedisManager;
+
+
     @Override
     public void run() {
 
         log.info("登录子游戏处理器。。。。。。");
+
+        if (jedisManager == null) {
+            jedisManager = SpringUtil.getBean(JedisManager.class);
+        }
 
         HallLoginMessage.LoginSubGameRequest request = getMsg();
 
@@ -48,9 +57,9 @@ public class LoginSubGameHandler extends TcpHandler {
 
         // 重连登录到之前保留的游戏服
         String key = HallKey.Role_Map_Info.getKey(userSession.getRoleId());
-        String gameType = JedisManager.getJedisCluster().hget(key, "gameType");
+        String gameType = jedisManager.getJedisCluster().hget(key, "gameType");
         if (gameType != null && gameType.equals(serverType.toString())) {
-            String gameId = JedisManager.getJedisCluster().hget(key, "gameId");
+            String gameId = jedisManager.getJedisCluster().hget(key, "gameId");
             if (gameId != null) {
                 serverInfo = ServerManager.getInstance().getGameServerInfo(serverType, Integer.parseInt(gameId));
             }
@@ -75,7 +84,7 @@ public class LoginSubGameHandler extends TcpHandler {
         Map<String, String> redisMap=new HashMap<>(2);
         redisMap.put("gameId", String.valueOf(serverInfo.getId()));
         redisMap.put("gameType", String.valueOf(serverType.getType()));
-        JedisManager.getJedisCluster().hmset(key, redisMap);
+        jedisManager.getJedisCluster().hmset(key, redisMap);
 
         userSession.sendToGame(request);
 
