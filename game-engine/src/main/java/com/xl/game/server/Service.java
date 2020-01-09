@@ -90,6 +90,9 @@ public abstract class Service implements Runnable {
     }
 
 
+    public Map<ThreadType, Executor> getServerThreads() {
+        return serverThreads;
+    }
 
     private static final class CloseByExit implements Runnable {
         private final Service service;

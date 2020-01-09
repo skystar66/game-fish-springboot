@@ -67,8 +67,8 @@ public class ServerManager {
      * @param info
      */
     public void updateServerInfo(ServerMessage.ServerInfo info) {
-
-        if (info.getType() != ServerType.HALL.getType()) {
+        if (info.getType() < 100 && info.getType() != ServerType.HALL.ordinal()) { // 游戏服从101开始定义
+            // 大厅服需要更新
             return;
         }
 

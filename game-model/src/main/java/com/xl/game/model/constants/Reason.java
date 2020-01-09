@@ -9,7 +9,7 @@ public enum Reason {
 
     UserQuit("用户退出"),
     UserLogin("用户登录"),
-    UserReconnect("用户登录"),
+    UserReconnect("用户重连"),
 
     CrossServer("跨服"),
 

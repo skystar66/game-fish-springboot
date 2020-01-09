@@ -13,7 +13,7 @@ import java.util.Map;
  * @QQ 359135103
  * 2017年8月29日 上午9:48:52
  */
-public interface IMutilTcpClientService {
+public interface IMutilTcpClientService extends Runnable{
 
 
     /**

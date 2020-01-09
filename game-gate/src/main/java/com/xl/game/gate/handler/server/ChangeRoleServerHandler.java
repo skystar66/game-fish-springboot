@@ -47,7 +47,7 @@ public class ChangeRoleServerHandler extends TcpHandler {
             ServerType serverType = ServerType.valueof(req.getServerType());
 
             ServerInfo serverInfo = null;
-            //todo 不明白
+            //todo 目标服务器
             if (req.getServerId() < 1) {
                 //找空闲服务器
                 serverInfo = ServerManager.getInstance().getIdleGameServer(serverType, userSession);

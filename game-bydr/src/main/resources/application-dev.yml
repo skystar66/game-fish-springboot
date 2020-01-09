@@ -1,5 +1,5 @@
 server:
-  port: 10003
+  port: 10004
 spring:
   application:
     name: game-cluster
@@ -24,11 +24,11 @@ threadpool-tcp:
   heart: 1000
 mina-cluster-client:
   id: 1
-  orderedThreadPoolExecutorSize: 2
+  orderedThreadPoolExecutorSize: 5
   receiveBufferSize: 1048576
   sendBufferSize: 1048576
   soLinger: 0
-  type: HALL
+  type: GAME_BYDR
   maxConnectCount: 1
   connTo:
     receiveBufferSize: 1048576
@@ -38,13 +38,13 @@ mina-cluster-client:
     port: 8000
 mina-gate-client:
   id: 1
-  orderedThreadPoolExecutorSize: 2
+  orderedThreadPoolExecutorSize: 5
   receiveBufferSize: 1048576
   sendBufferSize: 1048576
   soLinger: 0
-  type: HALL
-  name: 大厅1服
-  maxConnectCount: 3
+  type: GAME_BYDR
+  name: 捕鱼达人 1服
+  maxConnectCount: 10
   connTo:
     receiveBufferSize: 1048576
     sendBufferSize: 1048576
@@ -52,9 +52,9 @@ mina-gate-client:
     host: 127.0.0.1
     port: 8520
 mina-http:
-  httpPort: 9102
+  httpPort: 9002
   ip: 127.0.0.1
-  orderedThreadPoolExecutorSize: 5
+  orderedThreadPoolExecutorSize: 4
   receiveBufferSize: 204800
   sendBufferSize: 204800
   reuseAddress: true
@@ -62,6 +62,19 @@ mina-http:
   readerIdleTime: 30
   writerIdleTime: 30
   soLinger: 5
+mina-tcp:
+  id: 1
+  httpPort: 9002
+  ip: 127.0.0.1
+  type: GAME_BYDR
+  orderedThreadPoolExecutorSize: 50
+  receiveBufferSize: 1048576
+  sendBufferSize: 1048576
+  reuseAddress: true
+  tcpNoDelay: true
+  readerIdleTime: 180
+  writerIdleTime: 0
+  soLinger: 0
 redis:
   nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004,127.0.0.1:7005,127.0.0.1:7006
   poolMaxTotal: 500
@@ -84,3 +97,5 @@ mq:
   password: admin
   host: 127.0.0.1
   port: 61616
+game:
+  thradRoomNum: 4
