@@ -5,6 +5,7 @@ import com.xl.game.config.*;
 import com.xl.game.hall.config.MinaClusterClientConfig;
 import com.xl.game.hall.config.MinaGateClientConfig;
 import com.xl.game.hall.init.HandlerInit;
+import com.xl.game.hall.manager.MongoManager;
 import com.xl.game.message.ServerMessage;
 import com.xl.game.model.redis.key.HallChannel;
 import com.xl.game.model.script.IGameServerCheckScript;
@@ -92,6 +93,9 @@ public class HallServer {
     @Autowired
     IGameServerCheckScript gameServerCheckScript;
 
+    @Autowired
+    MongoClientConfig mongoClientConfig;
+
 
 
     @PostConstruct
@@ -122,6 +126,9 @@ public class HallServer {
         hallServerCheckTimer.start();
         hallPubListener.start();
 
+
+        //创建mongo 连接
+        MongoManager.getInstance().createConnect(mongoClientConfig);
 
     }
 

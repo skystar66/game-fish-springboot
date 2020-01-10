@@ -38,6 +38,7 @@ public class EnterRoomScript implements IRoomScript {
     public void enterRoom(Role role, Room room) {
 
 
+        log.info("进入房间请求 =========");
         room.getRoomThread().execute(() -> {
             if (room.getRoles().containsValue(role)) {
                 log.debug("角色{}已经在房间中", role.getNick());

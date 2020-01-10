@@ -65,6 +65,7 @@ public class GateHttpServer extends Service {
         TcpHandlerMsgManager.getInstance().addHandler(ServerListHandler.class);
         TcpHandlerMsgManager.getInstance().addHandler(ServerRegisterHandler.class);
         TcpHandlerMsgManager.getInstance().addHandler(ServerRegisterResHandler.class);
+        TcpHandlerMsgManager.getInstance().addHandler(LoginResSubGameHandler.class);
 
 
     }
@@ -89,7 +90,7 @@ public class GateHttpServer extends Service {
 
         @Override
         protected Service getSevice() {
-            return null;
+            return service;
         }
     }
 

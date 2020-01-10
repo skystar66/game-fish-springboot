@@ -91,6 +91,7 @@ public class MsgUtil {
             buf.putLong(message.getUserID());// 8
             buf.putInt(msgID);// 4
             buf.put(msgData);
+            log.info("MsgUtil MsgID is : {}",msgID);
         } else {
             log.warn("无法解析消息类型：" + message.getMsg().getClass().getName());
             return null;

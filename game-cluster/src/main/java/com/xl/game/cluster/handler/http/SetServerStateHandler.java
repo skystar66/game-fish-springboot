@@ -28,6 +28,8 @@ public class SetServerStateHandler extends HttpHandler {
     @Override
     public void run() {
 
+        log.info("http handler 设置服务器状态");
+
         String auth = getString("auth");
         if (!Config.SERVER_AUTH.equals(auth)) {
             sendMsg("验证失败");

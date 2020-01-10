@@ -61,13 +61,9 @@ public class RoleLoginScript implements IRoleScript {
      */
     private void tempInit(Role role) {
 
-        if (packetScript == null) {
-            packetScript = SpringUtil.getBean(IPacketScript.class);
-        }
-
         // 道具
         if (role.getItemCount() < 1) {
-            PacketManager.getInstance(packetScript).addItem(role, 1, 20, Reason.UserLogin, null);
+            PacketManager.getInstance().addItem(role, 1, 20, Reason.UserLogin, null);
         }
         //邮件
 //        List<Mail> mails = MailDao.getMails(role.getId());

@@ -9,6 +9,7 @@ import com.xl.game.model.struct.Role;
 import com.xl.game.util.SpringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.util.function.Consumer;
 
@@ -19,20 +20,15 @@ import java.util.function.Consumer;
  * @QQ 359135103
  * 2017年9月18日 下午4:55:43
  */
+@Component(value = "userItem")
 public class UseItemScript implements IPacketScript {
     private static final Logger LOGGER = LoggerFactory.getLogger(UseItemScript.class);
 
 
-    private IPacketScript packetScript;
 
     @Override
     public void useItem(Role role, long itemId, int num, Reason reason, Consumer<Item> itemConsumer) {
-
-        if (packetScript == null) {
-            packetScript = SpringUtil.getBean(IPacketScript.class);
-        }
-
-        Item item = PacketManager.getInstance(packetScript).getItem(role, itemId);
+        Item item = PacketManager.getInstance().getItem(role, itemId);
         if (item == null) {
             return;
         }

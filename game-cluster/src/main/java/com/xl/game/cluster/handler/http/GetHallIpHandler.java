@@ -31,6 +31,8 @@ public class GetHallIpHandler extends HttpHandler {
     @Override
     public void run() {
 
+        log.info("http handler 获取大厅服务器");
+
         Map<Integer, ServerInfo> serverInfoMap = ServerManager.getInstance().getServers(ServerType.HALL);
 
         if (MapUtils.isEmpty(serverInfoMap)) {

@@ -7,6 +7,7 @@ import com.xl.game.bydr.struts.role.Role;
 import com.xl.game.bydr.struts.room.ClassicsRoom;
 import com.xl.game.bydr.struts.room.Room;
 import com.xl.game.message.bydr.BydrRoomMessage;
+import com.xl.game.util.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,6 +36,14 @@ public class RoomManager {
     private IRoomScript quitRoom;
 
     private RoomManager() {
+
+        if (enterRoom == null) {
+            enterRoom = (IRoomScript)SpringUtil.getBean("enterRoom");
+        }
+
+        if (quitRoom == null) {
+            quitRoom = (IRoomScript)SpringUtil.getBean("quitRoom");
+        }
 
     }
 
@@ -167,6 +176,21 @@ public class RoomManager {
     public void broadcastFishEnter(Room room, Fish... fishs) {
 
 
+        if (fishs == null) {
+            return;
+        }
+        BydrRoomMessage.FishEnterRoomResponse.Builder builder = BydrRoomMessage.FishEnterRoomResponse.newBuilder();
+        BydrRoomMessage.FishInfo.Builder fishInfo = BydrRoomMessage.FishInfo.newBuilder();
+        for (Fish fish : fishs) {
+            builder.addFishInfo(buildFishInfo(fishInfo, fish));
+        }
+
+        BydrRoomMessage.FishEnterRoomResponse response = builder.build();
+        room.getRoles().values().forEach(r -> {
+            r.sendMsg(response);
+        });
+
+
     }
 
 
@@ -207,6 +231,30 @@ public class RoomManager {
         builder.setLevel(role.getLevel());
         builder.setRid(role.getId());
         builder.setVip(role.isIs_vip());
+        return builder.build();
+    }
+
+
+    /**
+     * 构建鱼信息
+     *
+     * @param builder
+     * @param fish
+     *            单个鱼
+     * @return
+     */
+    private BydrRoomMessage.FishInfo buildFishInfo(BydrRoomMessage.FishInfo.Builder builder, Fish fish) {
+        builder.clear();
+        builder.addId(fish.getId());
+        builder.addConfigId(fish.getConfigId());
+        builder.addAllTrackId(fish.getTrackIds());
+        builder.setFormation(fish.getFormationId()); // 0普通鱼 1boss鱼群 100~200
+        // 鱼潮阵型ID
+        builder.setBornTime(fish.getBornTime());
+        builder.setServerTime(System.currentTimeMillis());
+        builder.setSpeed(fish.getSpeed());
+        builder.setTopSpeed(fish.getTopSpeed());
+        builder.setTopSpeedStartTime(fish.getTopSpeedStartTime());
         return builder.build();
     }
 

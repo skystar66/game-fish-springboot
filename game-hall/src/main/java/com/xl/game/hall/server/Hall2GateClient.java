@@ -106,6 +106,13 @@ public class Hall2GateClient extends MutilMinaTcpClientService {
             this.iGameServerCheckScript = iGameServerCheckScript;
         }
 
+
+        @Override
+        public void messageReceived(IoSession ioSession, Object obj) throws Exception {
+            System.out.println("1111");
+            super.messageReceived(ioSession, obj);
+        }
+
         @Override
         public void sessionOpened(IoSession session) throws Exception {
             super.sessionOpened(session);

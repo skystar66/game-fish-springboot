@@ -28,6 +28,7 @@ threadpool-tcp:
   keepAliveTime: 30
   heart: 1000
 mina-client:
+  ip: 192.168.2.1
   id: 3
   orderedThreadPoolExecutorSize: 2
   receiveBufferSize: 1048576
@@ -44,11 +45,11 @@ mina-client:
     receiveBufferSize: 1048576
     sendBufferSize: 1048576
     type: CLUSTER
-    host: 127.0.0.1
+    host: 192.168.2.1
     port: 8000
 mina-game-tcp:
   id: 3
-  ip: 127.0.0.1
+  ip: 192.168.2.1
   port: 8003
   httpPort: 8003
   type: GATE
@@ -63,6 +64,7 @@ mina-game-tcp:
   soLinger: 0
   channel: 37wan
 mina-http:
+  ip: 192.168.2.1
   httpPort: 8006
   orderedThreadPoolExecutorSize: 5
   receiveBufferSize: 204800
@@ -74,7 +76,7 @@ mina-http:
   soLinger: 5
 mina-user-udp:
   id: 3
-  ip: 127.0.0.1
+  ip: 192.168.2.1
   port: 8004
   httpPort: 8003
   type: GATE
@@ -90,7 +92,7 @@ mina-user-udp:
   channel: jzy
 mina-user-tcp:
   id: 3
-  ip: 127.0.0.1
+  ip: 192.168.2.1
   port: 8002
   httpPort: 8006
   type: GATE
@@ -106,7 +108,7 @@ mina-user-tcp:
   channel: jzy
 mina-ws-tcp:
   id: 3
-  ip: 127.0.0.1
+  ip: 192.168.2.1
   port: 8007
   httpPort: 8003
   type: GATE

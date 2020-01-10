@@ -13,7 +13,8 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 
 @SpringBootApplication(exclude =
         {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class},
-        scanBasePackages = {"com.xl.game.cluster","com.xl.game.config"})
+        scanBasePackages = {"com.xl.game.cluster","com.xl.game.config",
+                "com.xl.game.*"})
 public class ClusterApplication implements CommandLineRunner {
 
 

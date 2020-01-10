@@ -41,7 +41,7 @@ public class PacketItemsHandler extends TcpHandler {
         HallPacketMessage.PacketItemsResponse.Builder builder
                 = HallPacketMessage.PacketItemsResponse.newBuilder();
         role.getItems().forEach((key, value) -> {
-            builder.addItems(PacketManager.getInstance(packetScript).buildPacketItem(value));
+            builder.addItems(PacketManager.getInstance().buildPacketItem(value));
         });
         sendIdMsg(builder.build());
 

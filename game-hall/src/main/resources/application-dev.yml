@@ -23,6 +23,7 @@ threadpool-tcp:
   keepAliveTime: 30
   heart: 1000
 mina-cluster-client:
+  ip: 192.168.2.1
   id: 1
   orderedThreadPoolExecutorSize: 2
   receiveBufferSize: 1048576
@@ -34,9 +35,10 @@ mina-cluster-client:
     receiveBufferSize: 1048576
     sendBufferSize: 1048576
     type: CLUSTER
-    host: 127.0.0.1
+    host: 192.168.2.1
     port: 8000
 mina-gate-client:
+  ip: 192.168.2.1
   id: 1
   orderedThreadPoolExecutorSize: 2
   receiveBufferSize: 1048576
@@ -49,11 +51,11 @@ mina-gate-client:
     receiveBufferSize: 1048576
     sendBufferSize: 1048576
     type: HALL
-    host: 127.0.0.1
+    host: 192.168.2.1
     port: 8520
 mina-http:
   httpPort: 9102
-  ip: 127.0.0.1
+  ip: 192.168.2.1
   orderedThreadPoolExecutorSize: 5
   receiveBufferSize: 204800
   sendBufferSize: 204800

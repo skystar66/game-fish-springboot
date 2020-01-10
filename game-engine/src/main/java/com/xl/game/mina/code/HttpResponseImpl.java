@@ -6,6 +6,7 @@ import org.apache.mina.http.api.HttpStatus;
 import org.apache.mina.http.api.HttpVersion;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -118,5 +119,17 @@ public class HttpResponseImpl implements HttpResponse {
     @Override
     public Map<String, String> getHeaders() {
         return headers;
+    }
+
+
+    @Override
+    public String toString() {
+        return "HttpResponseImpl{" +
+                "headers=" + headers +
+                ", version=" + version +
+                ", status=" + status +
+                ", bodyStringBuffer=" + bodyStringBuffer +
+                ", body=" + Arrays.toString(body) +
+                '}';
     }
 }

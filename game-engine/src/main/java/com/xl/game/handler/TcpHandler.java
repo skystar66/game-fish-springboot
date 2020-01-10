@@ -3,6 +3,7 @@ package com.xl.game.handler;
 import com.google.protobuf.Message;
 import com.xl.game.message.IDMessage;
 import com.xl.game.struts.Person;
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
@@ -12,6 +13,7 @@ import com.xl.game.struts.Person;
  * @author xuliang
  * @mail 2755055412@qq.com
  */
+@Slf4j
 public class TcpHandler extends AbsHandler {
 
     private Message message;
@@ -72,9 +74,12 @@ public class TcpHandler extends AbsHandler {
      */
     public void sendIdMsg(Object object) {
         if (getSession() != null && getSession().isConnected()) {
+            log.info("执行 tcp  mina session ");
             getSession().write(new IDMessage(session, object, rid));
         } else if (getChannel() != null && getChannel().isActive()) {
             getChannel().writeAndFlush(new IDMessage(channel, object, rid, null));
+        } else {
+            log.info("tcp session is null ！！！");
         }
     }
 

@@ -34,7 +34,7 @@ mina-cluster-client:
     receiveBufferSize: 1048576
     sendBufferSize: 1048576
     type: CLUSTER
-    host: 127.0.0.1
+    host: 192.168.7.129
     port: 8000
 mina-gate-client:
   id: 1
@@ -49,11 +49,11 @@ mina-gate-client:
     receiveBufferSize: 1048576
     sendBufferSize: 1048576
     type: HALL
-    host: 127.0.0.1
+    host: 192.168.2.1
     port: 8520
 mina-http:
   httpPort: 9002
-  ip: 127.0.0.1
+  ip: 192.168.2.1
   orderedThreadPoolExecutorSize: 4
   receiveBufferSize: 204800
   sendBufferSize: 204800
@@ -65,7 +65,7 @@ mina-http:
 mina-tcp:
   id: 1
   httpPort: 9002
-  ip: 127.0.0.1
+  ip: 192.168.2.1
   type: GAME_BYDR
   orderedThreadPoolExecutorSize: 50
   receiveBufferSize: 1048576

@@ -68,7 +68,7 @@ public class IDMessage implements Runnable {
     public void run() {
         if (session != null && session.isConnected()) {
             IoBuffer buf = MsgUtil.toIobuffer(this);
-            log.info("执行mina session  send！");
+            log.info("执行mina session  send！msg:{}", buf.toString());
             session.write(buf);
         } else if (channel != null && channel.isActive()) {
             channel.write(this);

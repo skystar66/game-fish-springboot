@@ -11,7 +11,8 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 
 @SpringBootApplication(exclude =
         {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class},
-        scanBasePackages = {"com.xl.game.bydr", "com.xl.game", "com.xl.game.model"})
+        scanBasePackages = {"com.xl.game.bydr", "com.xl.game", "com.xl.game.model"
+                , "com.xl.game.*"})
 public class BydrApplication implements CommandLineRunner {
 
 

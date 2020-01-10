@@ -1,7 +1,9 @@
 package com.xl.game.gate.session;
 
 
+import com.xl.game.engine.ServerInfo;
 import com.xl.game.engine.ServerType;
+import com.xl.game.gate.manager.ServerManager;
 import com.xl.game.gate.manager.UserSessionManager;
 import com.xl.game.message.IDMessage;
 import lombok.Data;
@@ -155,6 +157,21 @@ public class UserSession {
     public void removeHall(){
         hallSession =null;
         hallServerId =0;
+    }
+
+
+
+    public IoSession getGameSession() {
+        if ((gameSession == null || !gameSession.isConnected()) && getServerId() > 0) {
+            ServerInfo serverInfo = ServerManager.getInstance().getGameServerInfo(serverType, serverId);
+            if (serverInfo != null) {
+                gameSession = serverInfo.getMostIdleIoSession();
+//				LOGGER.debug("用户{} 游戏session{}", userId, gameSession.getId());
+            }else{
+                log.warn("{}-{}没有服务器连接", serverType, serverId);
+            }
+        }
+        return gameSession;
     }
 
 

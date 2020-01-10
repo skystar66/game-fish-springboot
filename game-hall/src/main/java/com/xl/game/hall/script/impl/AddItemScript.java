@@ -6,6 +6,7 @@ import com.xl.game.model.struct.Item;
 import com.xl.game.model.struct.Role;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.util.function.Consumer;
 
@@ -16,6 +17,7 @@ import java.util.function.Consumer;
  * 2017年9月18日 下午4:58:18
  */
 @Slf4j
+@Component(value = "addItem")
 public class AddItemScript implements IPacketScript {
 
 	@Override

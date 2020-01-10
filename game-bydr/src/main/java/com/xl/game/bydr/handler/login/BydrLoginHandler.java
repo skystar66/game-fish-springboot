@@ -24,6 +24,7 @@ public class BydrLoginHandler extends TcpHandler {
     @Override
     public void run() {
 
+        log.info("捕鱼达人登录子游戏");
         HallLoginMessage.LoginSubGameRequest req = getMsg();
 
         switch (req.getType()) {

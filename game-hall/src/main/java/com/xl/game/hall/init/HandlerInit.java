@@ -12,6 +12,9 @@ import com.xl.game.hall.handler.server.ServerListHandler;
 import com.xl.game.hall.handler.server.ServerRegisterHandler;
 import com.xl.game.manager.http.HttpHandlerMsgManager;
 import com.xl.game.manager.tcp.TcpHandlerMsgManager;
+import com.xl.game.model.server.ExitServerHandler;
+import com.xl.game.model.server.JvmInfoHandler;
+import com.xl.game.model.server.ThreadInfoHandler;
 
 public class HandlerInit implements Runnable {
 
@@ -20,13 +23,20 @@ public class HandlerInit implements Runnable {
     public void run() {
 
 
+        //初始化httphandler
+        HttpHandlerMsgManager.getInstance().addHandler(ExitServerHandler.class);
+        HttpHandlerMsgManager.getInstance().addHandler(JvmInfoHandler.class);
+        HttpHandlerMsgManager.getInstance().addHandler(ThreadInfoHandler.class);
+        HttpHandlerMsgManager.getInstance().addHandler(GmHandler.class);
+
+
+
         TcpHandlerMsgManager.getInstance().addHandler(ChatHandler.class);
         TcpHandlerMsgManager.getInstance().addHandler(ApplyGuildHandler.class);
         TcpHandlerMsgManager.getInstance().addHandler(CreateGuildHandler.class);
         TcpHandlerMsgManager.getInstance().addHandler(GuildApprovalHandler.class);
         TcpHandlerMsgManager.getInstance().addHandler(GuildInfoHandler.class);
         TcpHandlerMsgManager.getInstance().addHandler(GuildListHandler.class);
-        TcpHandlerMsgManager.getInstance().addHandler(GmHandler.class);
         TcpHandlerMsgManager.getInstance().addHandler(LoginHandler.class);
         TcpHandlerMsgManager.getInstance().addHandler(QuitHandler.class);
         TcpHandlerMsgManager.getInstance().addHandler(MailListHandler.class);

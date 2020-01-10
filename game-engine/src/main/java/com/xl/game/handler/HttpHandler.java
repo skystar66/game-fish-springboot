@@ -2,6 +2,7 @@ package com.xl.game.handler;
 
 import com.alibaba.fastjson.JSON;
 import com.xl.game.mina.code.HttpResponseImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.mina.core.session.IoSession;
 import org.apache.mina.http.HttpRequestImpl;
 import org.apache.mina.http.api.HttpStatus;
@@ -12,6 +13,7 @@ import org.apache.mina.http.api.HttpStatus;
  * @author xulaing
  * @date 2019-12-20
  */
+@Slf4j
 public abstract class HttpHandler implements IHandler {
 
 
@@ -36,7 +38,7 @@ public abstract class HttpHandler implements IHandler {
 
     @Override
     public HttpRequestImpl getMessage() {
-        return (HttpRequestImpl)request;
+        return (HttpRequestImpl) request;
     }
 
     @Override
@@ -48,7 +50,7 @@ public abstract class HttpHandler implements IHandler {
 
     @Override
     public void setCreateTime(long time) {
-        this.createTime=time;
+        this.createTime = time;
     }
 
     @Override
@@ -66,7 +68,7 @@ public abstract class HttpHandler implements IHandler {
 
     @Override
     public void setParameter(Object parameter) {
-        response=(HttpResponseImpl) parameter;
+        response = (HttpResponseImpl) parameter;
     }
 
 
@@ -82,12 +84,12 @@ public abstract class HttpHandler implements IHandler {
     }
 
 
-
     /**
      * 发消息
      */
     public void response() {
         if (response != null) {
+            log.info("http result： {}", response);
             session.write(response);
         } else {
             session.write(errResponseMessage());
@@ -110,8 +112,6 @@ public abstract class HttpHandler implements IHandler {
     }
 
 
-
-
     /**
      * 获取字符串参数
      *
@@ -121,7 +121,6 @@ public abstract class HttpHandler implements IHandler {
     public String getString(String field) {
         return getMessage().getParameter(field);
     }
-
 
 
     /**
@@ -156,7 +155,6 @@ public abstract class HttpHandler implements IHandler {
         getParameter().appendBody(JSON.toJSONString(object));
         response();
     }
-
 
 
     @Override

@@ -58,6 +58,12 @@ public class ClusterHttpServer extends Service {
     }
 
 
+    @Override
+    public void onShutDown() {
+        super.onShutDown();
+        httpServer.stop();
+    }
+
     /**
      * 消息处理器
      */

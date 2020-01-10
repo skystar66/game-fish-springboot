@@ -30,7 +30,8 @@ public class GateTcpGameServerHandler extends DefaultProtocolHandler {
     protected void forward(IoSession session, int msgID, byte[] bytes) {
         long rid = MsgUtil.getMessageRID(bytes, 0);
         if (rid > 0) {
-            UserSession userSession = UserSessionManager.getInstance().getUserSessionBySessionId(session.getId());
+            UserSession userSession = UserSessionManager.getInstance()
+                    .getUserSessionbyRoleId(rid);
             if (null != userSession) {
 
                 //udp 转发
@@ -45,6 +46,12 @@ public class GateTcpGameServerHandler extends DefaultProtocolHandler {
                 return;
             }
         }
+    }
+
+    @Override
+    public void sessionCreated(IoSession ioSession) throws Exception {
+        log.info("网关创建子游戏连接");
+        super.sessionCreated(ioSession);
     }
 
     @Override

@@ -40,7 +40,8 @@ public abstract class HttpServerIoHandler implements IoHandler {
             handler.setMessage(httpRequest); //创建消息
             handler.setSession(ioSession);
             handler.setCreateTime(System.currentTimeMillis());
-            Executor executor = getSevice().getExecutor(handlerEntity.thread());
+            Service service = getSevice();
+            Executor executor = service.getExecutor(handlerEntity.thread());
             if (null != executor) {
                 executor.execute(handler);
             } else {

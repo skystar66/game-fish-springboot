@@ -4,6 +4,7 @@ import com.xl.game.thread.ExecutorPool;
 import com.xl.game.thread.ServerThread;
 import com.xl.game.thread.ThreadType;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections.MapUtils;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -86,6 +87,13 @@ public abstract class Service implements Runnable {
      */
     @SuppressWarnings("unchecked")
     public <T extends Executor> T getExecutor(ThreadType threadType) {
+
+        if (MapUtils.isEmpty(serverThreads)) {
+            return null;
+        }
+        if (serverThreads.get(threadType) == null) {
+            return null;
+        }
         return (T) serverThreads.get(threadType);
     }
 

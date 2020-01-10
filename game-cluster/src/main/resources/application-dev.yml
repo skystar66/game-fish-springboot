@@ -28,6 +28,7 @@ threadpool-tcp:
   keepAliveTime: 30
   heart: 1000
 mina-tcp:
+  ip: 192.168.2.1
   port: 8000
   orderedThreadPoolExecutorSize: 10
   receiveBufferSize: 1048576
@@ -38,14 +39,15 @@ mina-tcp:
   writerIdleTime: 1200
   soLinger: 0
 mina-http:
+  ip: 192.168.2.1
   httpPort: 8001
-  orderedThreadPoolExecutorSize: 10
-  receiveBufferSize: 1048576
-  sendBufferSize: 1048576
+  orderedThreadPoolExecutorSize: 100
+  receiveBufferSize: 204800
+  sendBufferSize: 204800
   reuseAddress: true
   tcpNoDelay: true
-  readerIdleTime: 1200
-  writerIdleTime: 1200
+  readerIdleTime: 30
+  writerIdleTime: 0
   soLinger: 0
 
 redis:

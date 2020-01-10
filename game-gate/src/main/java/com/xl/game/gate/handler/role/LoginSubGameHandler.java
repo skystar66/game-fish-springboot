@@ -37,6 +37,8 @@ public class LoginSubGameHandler extends TcpHandler {
     @Override
     public void run() {
 
+
+
         log.info("登录子游戏处理器。。。。。。");
 
         if (jedisManager == null) {

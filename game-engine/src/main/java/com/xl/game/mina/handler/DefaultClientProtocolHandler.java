@@ -9,9 +9,10 @@ public class DefaultClientProtocolHandler extends DefaultProtocolHandler {
 
 
     public DefaultClientProtocolHandler(int messageHeaderLength, MinaClientService service) {
-        super(4);
+        super(messageHeaderLength);
         this.service = service;
     }
+
 
 
     public DefaultClientProtocolHandler(MinaClientService service) {

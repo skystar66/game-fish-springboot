@@ -26,6 +26,8 @@ public class UserQuitScript implements IUserScript {
 
     @Override
     public void quit(IoSession session, Reason reason) {
+        log.info("用户退出 ======  退出原因：{}", reason.getReason());
+
         Object attribute = session.getAttribute(Config.USER_SESSION);
         if (attribute == null) {
             log.warn("session 为空 ：{}", reason.toString());
@@ -45,13 +47,13 @@ public class UserQuitScript implements IUserScript {
         //是否连接大厅服
         if (userSession.getHallSession() != null) {
 
-            HallLoginMessage.QuitRequest.Builder builder=HallLoginMessage.QuitRequest.newBuilder();
+            HallLoginMessage.QuitRequest.Builder builder = HallLoginMessage.QuitRequest.newBuilder();
             builder.setRid(userSession.getRoleId());
             userSession.sendToHall(builder.build());
             userSession.removeHall();
         }
 
-        if(Reason.SessionIdle==reason||Reason.GmTickRole==reason||Reason.ServerClose==reason){
+        if (Reason.SessionIdle == reason || Reason.GmTickRole == reason || Reason.ServerClose == reason) {
             session.closeOnFlush();
             UserSessionManager.getInstance().quit(userSession, reason);
         }

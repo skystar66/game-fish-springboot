@@ -74,6 +74,11 @@ public abstract class DefaultProtocolHandler implements IoHandler {
             }
             int offset = messageHeaderLength > 4 ? 8 : 0;
             int msgID = MsgUtil.getMessageID(bytes, offset); //消息id
+
+            if (msgID == 0) {
+                log.info("消息id：{}", msgID);
+
+            }
             log.info("消息id：{}", msgID);
             //校验消息id 是否已经注册
             if (TcpHandlerMsgManager.getInstance().getTcpHandlerMap().containsKey(msgID)) {

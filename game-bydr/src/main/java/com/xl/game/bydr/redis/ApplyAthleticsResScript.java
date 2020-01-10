@@ -24,7 +24,7 @@ import java.util.List;
  * 2017年8月3日 上午9:44:01
  */
 @Slf4j
-@Component(value = "applyAthleticsResScript")
+@Component(value = "loginHall")
 public class ApplyAthleticsResScript implements IPubSubScript {
 
 

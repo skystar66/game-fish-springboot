@@ -26,6 +26,7 @@ public class GetGateIpHandler extends HttpHandler {
     @Override
     public void run() {
 
+        log.info("http handler 获取网关服务器");
         String version = getString("version");
         ServerInfo serverInfo = ServerManager.getInstance().getIdleGate(version);
         if (serverInfo == null) {

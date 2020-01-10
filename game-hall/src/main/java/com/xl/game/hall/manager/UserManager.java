@@ -3,6 +3,7 @@ package com.xl.game.hall.manager;
 
 import com.xl.game.hall.script.IUserScript;
 import com.xl.game.model.struct.User;
+import com.xl.game.util.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Collection;
@@ -24,7 +25,7 @@ public class UserManager {
     private IUserScript userScript;
 
     private UserManager() {
-
+        this.userScript=SpringUtil.getBean(IUserScript.class);
     }
 
     public static UserManager getInstance() {

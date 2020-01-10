@@ -67,6 +67,7 @@ public class UserSessionManager {
 
     public void onUserConnected(UserSession userSession) {
         if (userSession.getClientSession() != null) {
+            log.info("session id : {}",userSession.getClientSession().getId());
             allSessions.put(userSession.getClientSession().getId(), userSession);
         }
     }

@@ -46,6 +46,19 @@ public class RoleManager {
         if (jedisManager == null) {
             jedisManager = SpringUtil.getBean(JedisManager.class);
         }
+
+
+        if (createRole == null) {
+            createRole = (IRoleScript)SpringUtil.getBean("createRole");
+        }
+
+        if (roleLogin == null) {
+            roleLogin = (IRoleScript)SpringUtil.getBean("roleLogin");
+        }
+
+        if (quitRole == null) {
+            quitRole = (IRoleScript)SpringUtil.getBean("roleQuit");
+        }
     }
 
     public static RoleManager getInstance() {

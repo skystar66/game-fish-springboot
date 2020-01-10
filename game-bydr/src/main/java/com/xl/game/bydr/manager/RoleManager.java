@@ -7,6 +7,7 @@ import com.xl.game.model.constants.Reason;
 import com.xl.game.model.redis.key.BydrKey;
 import com.xl.game.redis.manager.JedisManager;
 import com.xl.game.util.JsonUtil;
+import com.xl.game.util.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
@@ -37,6 +38,17 @@ public class RoleManager {
 
     private RoleManager() {
 
+        if (roleLogin == null) {
+            roleLogin = (IRoleScript) SpringUtil.getBean("roleLogin");
+        }
+        if (roleQuit == null) {
+            roleQuit = (IRoleScript) SpringUtil.getBean("roleQuit");
+        }
+        if (roleChangeGold == null) {
+            roleChangeGold = (IRoleScript) SpringUtil.getBean("roleGoldChange");
+        } if (jedisManager == null) {
+            jedisManager =  SpringUtil.getBean(JedisManager.class);
+        }
     }
 
     public static RoleManager getInstance() {

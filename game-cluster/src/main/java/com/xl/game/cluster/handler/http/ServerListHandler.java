@@ -29,6 +29,8 @@ public class ServerListHandler extends HttpHandler {
     public void run() {
 
 
+        log.info("http handler 获取所有服务器");
+
         List<ServerInfo> serverInfoList = new ArrayList<>();
         ServerManager.getInstance().getServers().values().forEach(serverInfoMap -> {
 
